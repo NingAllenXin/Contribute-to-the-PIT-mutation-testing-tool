@@ -454,3 +454,167 @@ org.apache.maven.archetype.old.ArchetypeTemplateProcessingException: Directory a
 2018-03-09 23:03:02,377 [Worker-9] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2018-03-09 23:04:06,119 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2018-03-09 23:08:16,736 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-13 23:26:15,165 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-13 23:26:51,090 [Worker-13] ERROR o.e.m.c.i.p.ProjectConfigurationManager - Project pitest already exists
+2018-03-13 23:26:52,059 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: org.pitest:pitest-parent:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pom.xml.
+2018-03-13 23:26:52,887 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-build-config:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-build-config/pom.xml.
+2018-03-13 23:26:52,977 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-entry:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-entry/pom.xml.
+2018-03-13 23:26:52,990 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:53,012 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:53,151 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: org.pitest:pitest-maven:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/pom.xml.
+2018-03-13 23:26:54,158 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-ant:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-ant/pom.xml.
+2018-03-13 23:26:54,209 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-command-line:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-command-line/pom.xml.
+2018-03-13 23:26:54,236 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-html-report:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-html-report/pom.xml.
+2018-03-13 23:26:54,265 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-maven-verification:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven-verification/pom.xml.
+2018-03-13 23:26:54,316 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-aggregator:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-aggregator/pom.xml.
+2018-03-13 23:26:54,347 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-java8-verification:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-java8-verification/pom.xml.
+2018-03-13 23:26:54,435 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-groovy-verification:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-groovy-verification/pom.xml.
+2018-03-13 23:26:55,101 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-build-config/src/main/java
+2018-03-13 23:26:55,102 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pitest-build-config/src/main/resources
+2018-03-13 23:26:55,120 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-build-config/src/test/java
+2018-03-13 23:26:55,281 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-entry/src/main/java
+2018-03-13 23:26:55,282 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pitest-entry/src/main/resources
+2018-03-13 23:26:55,288 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-entry/src/test/java
+2018-03-13 23:26:55,288 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pitest-entry/src/test/resources
+2018-03-13 23:26:55,486 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-html-report/src/main/java
+2018-03-13 23:26:55,486 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pitest-html-report/src/main/resources
+2018-03-13 23:26:55,493 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-html-report/src/test/java
+2018-03-13 23:26:55,566 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-command-line/src/main/java
+2018-03-13 23:26:55,569 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-command-line/src/test/java
+2018-03-13 23:26:55,569 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pitest-command-line/src/test/resources
+2018-03-13 23:26:55,636 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-ant/src/main/java
+2018-03-13 23:26:55,638 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-ant/src/test/java
+2018-03-13 23:26:55,703 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-aggregator/src/main/java
+2018-03-13 23:26:55,711 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-aggregator/src/test/java
+2018-03-13 23:26:55,712 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pitest-aggregator/src/test/resources
+2018-03-13 23:26:55,773 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-maven/src/main/java
+2018-03-13 23:26:55,775 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-maven/src/test/java
+2018-03-13 23:26:55,889 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-maven-verification/src/main/java
+2018-03-13 23:26:55,892 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-maven-verification/src/test/java
+2018-03-13 23:26:55,892 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pitest-maven-verification/src/test/resources
+2018-03-13 23:26:56,255 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:56,397 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-java8-verification/src/main/java
+2018-03-13 23:26:56,402 [Worker-13] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pitest-java8-verification/src/test/java
+2018-03-13 23:26:56,458 [Worker-13] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 12 project(s) in 5 sec
+2018-03-13 23:26:57,417 [Worker-3] INFO  o.e.m.i.discovery.MavenDiscovery - No lifecyle mapping found at jar:file:/var/folders/wq/cz0fd5sj1l5gt_mpyvsktsch0000gn/T/RemoteBundleDiscoveryStrategy6097321234526415675.tmp/org.eclipse.m2e.discovery.oss_catalog_1.6.jar_2966721140854641578.jar!/lifecycle%2Forg.eclipse.m2e.discovery.lifecyclemapping.m2e-egit.xml
+2018-03-13 23:26:57,418 [Worker-3] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-egit does not contain lifecycle mapping metadata
+2018-03-13 23:26:57,419 [Worker-3] INFO  o.e.m.i.discovery.MavenDiscovery - No lifecyle mapping found at jar:file:/var/folders/wq/cz0fd5sj1l5gt_mpyvsktsch0000gn/T/RemoteBundleDiscoveryStrategy6097321234526415675.tmp/org.eclipse.m2e.discovery.oss_catalog_1.6.jar_2966721140854641578.jar!/lifecycle%2Forg.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive.xml
+2018-03-13 23:26:57,419 [Worker-3] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive does not contain lifecycle mapping metadata
+2018-03-13 23:26:57,863 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:57,880 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-13 23:26:57,892 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:57,892 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-build-config/src/test/resources
+2018-03-13 23:26:57,911 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:57,942 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:58,043 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,048 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2018-03-13 23:26:58,094 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,129 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 57 resources
+2018-03-13 23:26:58,401 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:58,453 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,454 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-groovy-verification/src/main/resources
+2018-03-13 23:26:58,455 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,455 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-groovy-verification/src/test/resources
+2018-03-13 23:26:58,567 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:58,573 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:58,595 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,596 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-13 23:26:58,599 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,599 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-html-report/src/test/resources
+2018-03-13 23:26:58,629 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:58,651 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,652 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-command-line/src/main/resources
+2018-03-13 23:26:58,653 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,653 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-03-13 23:26:58,764 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:58,914 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,914 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-ant/src/main/resources
+2018-03-13 23:26:58,915 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,915 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-ant/src/test/resources
+2018-03-13 23:26:58,932 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:58,997 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:58,997 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-aggregator/src/main/resources
+2018-03-13 23:26:58,998 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:59,000 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2018-03-13 23:26:59,031 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:59,045 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:59,045 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-java8-verification/src/main/resources
+2018-03-13 23:26:59,048 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:59,048 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-java8-verification/src/test/resources
+2018-03-13 23:26:59,140 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:26:59,776 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:59,777 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/src/main/resources
+2018-03-13 23:26:59,778 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:26:59,778 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/src/test/resources
+2018-03-13 23:26:59,803 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:27:01,029 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:27:01,030 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven-verification/src/main/resources
+2018-03-13 23:27:01,031 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:27:01,035 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 71 resources
+2018-03-13 23:27:53,117 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:27:53,126 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:28:37,048 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-html-report:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-html-report/pom.xml.
+2018-03-13 23:28:37,066 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:28:37,071 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:28:37,072 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:28:37,144 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-java8-verification:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-java8-verification/pom.xml.
+2018-03-13 23:28:37,194 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-maven-verification:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven-verification/pom.xml.
+2018-03-13 23:28:37,220 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-aggregator:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:28:39,063 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: org.pitest:pitest-maven:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/pom.xml.
+2018-03-13 23:28:39,587 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.4/maven-plugin-annotations-3.4.jar
+2018-03-13 23:28:39,699 [Worker-11] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.4/maven-plugin-annotations-3.4.jar
+2018-03-13 23:29:00,440 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:00,444 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:00,445 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:00,451 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:00,453 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-13 23:29:00,454 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:00,454 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-html-report/src/test/resources
+2018-03-13 23:29:00,468 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:00,468 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:tests:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:00,472 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:00,472 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-java8-verification/src/main/resources
+2018-03-13 23:29:00,473 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:00,473 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-java8-verification/src/test/resources
+2018-03-13 23:29:00,489 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:00,492 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-aggregator:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:01,084 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:01,084 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/src/main/resources
+2018-03-13 23:29:01,085 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:01,085 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/src/test/resources
+2018-03-13 23:29:01,104 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:01,107 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-aggregator:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:01,435 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:01,435 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven-verification/src/main/resources
+2018-03-13 23:29:01,436 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:01,436 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-13 23:29:04,933 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.pitest:pitest-maven-verification:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven-verification/pom.xml.
+2018-03-13 23:29:04,947 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:04,948 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-html-report:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:04,948 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-aggregator:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:06,433 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: org.pitest:pitest-maven:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/pom.xml.
+2018-03-13 23:29:06,873 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:06,874 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-html-report:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:06,875 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-aggregator:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:07,295 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:07,295 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/src/main/resources
+2018-03-13 23:29:07,296 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:07,296 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven/src/test/resources
+2018-03-13 23:29:07,330 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-entry:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:07,331 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-html-report:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:07,332 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.pitest:pitest-aggregator:jar:1.4.0-SNAPSHOT is missing, no dependency information available
+2018-03-13 23:29:07,741 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:07,742 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest-maven-verification/src/main/resources
+2018-03-13 23:29:07,744 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:29:07,744 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-13 23:38:56,894 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: org.pitest:pitest-parent:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pom.xml.
+2018-03-13 23:38:57,422 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: mutationtest:smallapp:0.0.1-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/smallapp/pom.xml.
+2018-03-13 23:38:57,666 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:38:57,666 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/smallapp/src/main/resources
+2018-03-13 23:38:57,668 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:38:57,668 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/smallapp/src/test/resources
+2018-03-13 23:38:58,915 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:38:58,930 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/smallapp/src/main/resources
+2018-03-13 23:38:58,931 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-03-13 23:38:58,931 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/smallapp/src/test/resources
+2018-03-13 23:41:50,304 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: org.pitest:pitest-parent:1.4.0-SNAPSHOT @ /Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pom.xml.
