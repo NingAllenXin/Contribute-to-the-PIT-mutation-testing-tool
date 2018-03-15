@@ -41,76 +41,76 @@ public enum AOD implements MethodMutatorFactory {
 
 	  static {
 	    MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.POP,
-	        "(AOD +)Ignore first character in stuck"));   //+
+	        "(AOD int +)Ignore first character in stuck"));   //+
 	    MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.POP,
-		        "(AOD -)Ignore first character in stuck")); //-
+		        "(AOD int -)Ignore first character in stuck")); //-
 	    MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.POP,
-		        "(AOD *)Ignore first character in stuck")); //*
+		        "(AOD int *)Ignore first character in stuck")); //*
 	    MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.POP,
-		        "(AOD /)Ignore first character in stuck")); // _/
+		        "(AOD int /)Ignore first character in stuck")); // _/
 	    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.POP,
-		        "(AOD ||)Ignore first character in stuck")); // binary 'or'   
+		        "(AOD int ||)Ignore first character in stuck")); // binary 'or'   
 	    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.POP,
-		        "(AOD &&)Ignore first character in stuck")); // binary 'and' 
+		        "(AOD int &&)Ignore first character in stuck")); // binary 'and' 
 	    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.POP,
-		        "(AOD %)Ignore first character in stuck")); // % 
+		        "(AOD int %)Ignore first character in stuck")); // % 
 	    MUTATIONS.put(Opcodes.IXOR,  new InsnSubstitution(Opcodes.POP,
-		        "(AOD xor)Ignore first character in stuck")); // xor
+		        "(AOD int xor)Ignore first character in stuck")); // xor
 	    MUTATIONS.put(Opcodes.ISHL,  new InsnSubstitution(Opcodes.POP,
-		        "(AOD arth left shift)Ignore first character in stuck")); // arth left shift 
+		        "(AOD int arth left shift)Ignore first character in stuck")); // arth left shift 
 	    MUTATIONS.put(Opcodes.ISHR,  new InsnSubstitution(Opcodes.POP,
-		        "(AOD arth right shift)Ignore first character in stuck")); // arth right shift
+		        "(AOD int arth right shift)Ignore first character in stuck")); // arth right shift
 	    MUTATIONS.put(Opcodes.IUSHR,  new InsnSubstitution(Opcodes.POP,
-		        "(AOD logical right shift)Ignore first character in stuck")); //  logical right shift
+		        "(AOD int logical right shift)Ignore first character in stuck")); //  logical right shift
 
-	    // longs   haven't been modified
+	    // longs   
 
 	    MUTATIONS.put(Opcodes.LADD,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long +)Ignore first character in stuck"));  
 	    MUTATIONS.put(Opcodes.LSUB,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long -)Ignore first character in stuck")); 
 	    MUTATIONS.put(Opcodes.LMUL,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long *)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.LDIV,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long /)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.LOR,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long ||)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.LAND,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long &&)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.LREM,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long %)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.LXOR,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long xor)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.LSHL,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long arth left shift)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.LSHR,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long arth right shift)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.LUSHR,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD long logical right shift)Ignore first character in stuck")); // 
 
 	    // floats
 	    MUTATIONS.put(Opcodes.FADD,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD float +)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.FSUB,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD float -)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.FMUL,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD float *)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.FDIV,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD float /)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.FREM,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD float %)Ignore first character in stuck")); // 
 
 	    // doubles
 	    MUTATIONS.put(Opcodes.DADD,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD double +)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.DSUB,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD double -)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.DMUL,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD double *)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.DDIV,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD double /)Ignore first character in stuck")); // 
 	    MUTATIONS.put(Opcodes.DREM,  new InsnSubstitution(Opcodes.POP,
-		        "(%)Ignore first character in stuck")); // % 
+		        "(AOD double %)Ignore first character in stuck")); // 
 
 	  }
 
