@@ -14,7 +14,7 @@
  */
 package org.pitest.mutationtest.engine.gregor.config;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -31,6 +31,7 @@ import org.pitest.functional.prelude.Prelude;
 import org.pitest.help.Help;
 import org.pitest.help.PitHelpError;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
+import org.pitest.mutationtest.engine.gregor.Mymutators.AOD;
 import org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.BooleanFalseReturnValsMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.BooleanTrueReturnValsMutator;
@@ -81,6 +82,7 @@ public final class Mutator {
      * Default mutator that mutates binary arithmetic operations.
      */
     add("MATH", MathMutator.MATH_MUTATOR);
+    add("AOD",AOD.AOD_MUTATOR);   //DiJin    added   test================================================================
 
     /**
      * Default mutator that removes method calls to void methods.

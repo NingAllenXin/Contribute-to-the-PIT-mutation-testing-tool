@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.pitest.mutationtest.engine.gregor.Mymutators.AOD"/>
+<fullyQualifiedTypeName name="org.pitest.mutationtest.engine.gregor.AbstractInsnMutator"/>
+<fullyQualifiedTypeName name="org.pitest.mutationtest.engine.gregor.MethodMutatorFactory"/>
+</qualifiedTypeNameHistroy>

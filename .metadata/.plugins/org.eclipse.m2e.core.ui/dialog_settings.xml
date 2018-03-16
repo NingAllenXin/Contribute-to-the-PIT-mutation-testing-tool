@@ -35,6 +35,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest/src/main/java/org/pitest/coverage/execute"/>
 			<item value="/Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest/pitest"/>
 			<item value="/Users/dijin/Library/Mobile Documents/com~apple~CloudDocs/GitHub/CS6367/pitest"/>
 		</list>
