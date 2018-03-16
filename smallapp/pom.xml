@@ -31,9 +31,6 @@
          <version>1.3.2</version>
         
          <configuration>
-             <includedGroups>
-                 CS6367
-             </includedGroups>
              <mutators>
                  <mutator>AOD</mutator>
              </mutators>
