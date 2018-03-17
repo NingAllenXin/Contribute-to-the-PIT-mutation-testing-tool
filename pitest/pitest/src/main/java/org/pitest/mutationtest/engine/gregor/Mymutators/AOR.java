@@ -43,14 +43,36 @@ class AORMethodVisitor extends AbstractInsnMutator {
     //Ints
     MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.ISUB,
             "Replaced integer addition with subtraction (AOR)"));
+    MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.IMUL,
+            "Replaced integer addition with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.IDIV,
+            "Replaced integer addition with division (AOR)"));
     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IADD,
             "Replaced integer subtraction with addition (AOR)"));
+    MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IMUL,
+            "Replaced integer subtraction with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IDIV,
+            "Replaced integer subtraction with division (AOR)"));
+    MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IADD,
+            "Replaced integer multiplication with addition (AOR)"));
+    MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.ISUB,
+            "Replaced integer multiplication with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer multiplication with division (AOR)"));
+    MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.IADD,
+            "Replaced integer division with addition (AOR)"));
+    MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.ISUB,
+            "Replaced integer division with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.IMUL,
             "Replaced integer division with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IADD,
+            "Replaced integer modulus with addition (AOR)"));
+    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.ISUB,
+            "Replaced integer modulus with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IMUL,
             "Replaced integer modulus with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IDIV,
+            "Replaced integer modulus with division (AOR)"));
 
     //Longs
     MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LSUB,
