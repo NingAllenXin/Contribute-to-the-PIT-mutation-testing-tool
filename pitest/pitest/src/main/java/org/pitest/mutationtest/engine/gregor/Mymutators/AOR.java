@@ -88,48 +88,46 @@ class AORMethodVisitor extends AbstractInsnMutator {
             "Replaced integer modulus with division (AOR)"));
 
     //Longs
-    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FSUB,
+    MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LSUB,
             "Replaced long addition with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FMUL,
+    MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LMUL,
             "Replaced long addition with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FDIV,
+    MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LDIV,
             "Replaced long addition with division (AOR)"));
-    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FREM,
+    MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LREM,
             "Replaced long addition with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FADD,
+    MUTATIONS.put(Opcodes.LSUB, new InsnSubstitution(Opcodes.LADD,
             "Replaced long subtraction with addition (AOR)"));
-    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FMUL,
+    MUTATIONS.put(Opcodes.LSUB, new InsnSubstitution(Opcodes.LMUL,
             "Replaced long subtraction with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FDIV,
+    MUTATIONS.put(Opcodes.LSUB, new InsnSubstitution(Opcodes.LDIV,
             "Replaced long subtraction with division (AOR)"));
-    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FREM,
+    MUTATIONS.put(Opcodes.LSUB, new InsnSubstitution(Opcodes.LREM,
             "Replaced long subtraction with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FADD,
+    MUTATIONS.put(Opcodes.LMUL, new InsnSubstitution(Opcodes.LADD,
             "Replaced long multiplication with addition (AOR)"));
-    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FSUB,
+    MUTATIONS.put(Opcodes.LMUL, new InsnSubstitution(Opcodes.LSUB,
             "Replaced long multiplication with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FDIV,
+    MUTATIONS.put(Opcodes.LMUL, new InsnSubstitution(Opcodes.LDIV,
             "Replaced long multiplication with division (AOR)"));
-    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FREM,
+    MUTATIONS.put(Opcodes.LMUL, new InsnSubstitution(Opcodes.LREM,
             "Replaced long multiplication with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FADD,
+    MUTATIONS.put(Opcodes.LDIV, new InsnSubstitution(Opcodes.LADD,
             "Replaced long division with addition (AOR)"));
-    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FSUB,
+    MUTATIONS.put(Opcodes.LDIV, new InsnSubstitution(Opcodes.LSUB,
             "Replaced long division with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FMUL,
+    MUTATIONS.put(Opcodes.LDIV, new InsnSubstitution(Opcodes.LMUL,
             "Replaced long division with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FREM,
+    MUTATIONS.put(Opcodes.LDIV, new InsnSubstitution(Opcodes.LREM,
             "Replaced long division with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FADD,
+    MUTATIONS.put(Opcodes.LREM, new InsnSubstitution(Opcodes.LADD,
             "Replaced long modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FSUB,
+    MUTATIONS.put(Opcodes.LREM, new InsnSubstitution(Opcodes.LSUB,
             "Replaced long modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FMUL,
+    MUTATIONS.put(Opcodes.LREM, new InsnSubstitution(Opcodes.LMUL,
             "Replaced long modulus with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FDIV,
+    MUTATIONS.put(Opcodes.LREM, new InsnSubstitution(Opcodes.LDIV,
             "Replaced long modulus with division (AOR)"));
-
-
 
     // Floats
     MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FSUB,
