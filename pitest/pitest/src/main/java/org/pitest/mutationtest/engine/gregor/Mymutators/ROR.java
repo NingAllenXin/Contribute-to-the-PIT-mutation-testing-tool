@@ -1,6 +1,6 @@
 package org.pitest.mutationtest.engine.gregor.Mymutators;
 
-import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.MethodVisitor; 
 import org.objectweb.asm.Opcodes;
 import org.pitest.mutationtest.engine.gregor.AbstractJumpMutator;
 import org.pitest.mutationtest.engine.gregor.MethodInfo;
@@ -10,7 +10,7 @@ import org.pitest.mutationtest.engine.gregor.MutationContext;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum RORMutator implements MethodMutatorFactory {
+public enum ROR implements MethodMutatorFactory {
 
   ROR_MUTATOR;
 
