@@ -114,14 +114,45 @@ class AORMethodVisitor extends AbstractInsnMutator {
     // Doubles
     MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DSUB,
             "Replaced double addition with subtraction (AOR)"));
+    MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DMUL,
+            "Replaced double addition with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DDIV,
+            "Replaced double addition with division (AOR)"));
+    MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DREM,
+            "Replaced double addition with modulus (AOR)"));
     MUTATIONS.put(Opcodes.DSUB, new InsnSubstitution(Opcodes.DADD,
             "Replaced double subtraction with addition (AOR)"));
+    MUTATIONS.put(Opcodes.DSUB, new InsnSubstitution(Opcodes.DMUL,
+            "Replaced double subtraction with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.DSUB, new InsnSubstitution(Opcodes.DDIV,
+            "Replaced double subtraction with division (AOR)"));
+    MUTATIONS.put(Opcodes.DSUB, new InsnSubstitution(Opcodes.DREM,
+            "Replaced double subtraction with modulus (AOR)"));
+    MUTATIONS.put(Opcodes.DMUL, new InsnSubstitution(Opcodes.DADD,
+            "Replaced double multiplication with addition (AOR)"));
+    MUTATIONS.put(Opcodes.DMUL, new InsnSubstitution(Opcodes.DSUB,
+            "Replaced double multiplication with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.DMUL, new InsnSubstitution(Opcodes.DDIV,
             "Replaced double multiplication with division (AOR)"));
+    MUTATIONS.put(Opcodes.DMUL, new InsnSubstitution(Opcodes.DREM,
+            "Replaced double multiplication with modulus (AOR)"));
+    MUTATIONS.put(Opcodes.DDIV, new InsnSubstitution(Opcodes.DADD,
+            "Replaced double division with addition (AOR)"));
+    MUTATIONS.put(Opcodes.DDIV, new InsnSubstitution(Opcodes.DSUB,
+            "Replaced double division with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.DDIV, new InsnSubstitution(Opcodes.DMUL,
             "Replaced double division with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.DDIV, new InsnSubstitution(Opcodes.DREM,
+            "Replaced double division with modulus (AOR)"));
+    MUTATIONS.put(Opcodes.DREM, new InsnSubstitution(Opcodes.DADD,
+            "Replaced double modulus with addition (AOR)"));
+    MUTATIONS.put(Opcodes.DREM, new InsnSubstitution(Opcodes.DSUB,
+            "Replaced double modulus with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.DREM, new InsnSubstitution(Opcodes.DMUL,
             "Replaced double modulus with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.DREM, new InsnSubstitution(Opcodes.DDIV,
+            "Replaced double modulus with division (AOR)"));
+
 
   }
 
