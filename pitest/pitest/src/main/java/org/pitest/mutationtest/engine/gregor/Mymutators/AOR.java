@@ -1,4 +1,4 @@
-ackage org.pitest.mutationtest.engine.gregor.Mymutators;
+package org.pitest.mutationtest.engine.gregor.Mymutators;
 
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
