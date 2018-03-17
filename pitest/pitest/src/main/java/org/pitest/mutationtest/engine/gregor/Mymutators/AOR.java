@@ -133,14 +133,45 @@ class AORMethodVisitor extends AbstractInsnMutator {
     // Floats
     MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FSUB,
             "Replaced float addition with subtraction (AOR)"));
+    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FMUL,
+            "Replaced float addition with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FDIV,
+            "Replaced float addition with division (AOR)"));
+    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FREM,
+            "Replaced float addition with modulus (AOR)"));
     MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FADD,
             "Replaced float subtraction with addition (AOR)"));
+    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FMUL,
+            "Replaced float subtraction with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FDIV,
+            "Replaced float subtraction with division (AOR)"));
+    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FREM,
+            "Replaced float subtraction with modulus (AOR)"));
+    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FADD,
+            "Replaced float multiplication with addition (AOR)"));
+    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FSUB,
+            "Replaced float multiplication with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FDIV,
             "Replaced float multiplication with division (AOR)"));
+    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FREM,
+            "Replaced float multiplication with modulus (AOR)"));
+    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FADD,
+            "Replaced float division with addition (AOR)"));
+    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FSUB,
+            "Replaced float division with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FMUL,
             "Replaced float division with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FREM,
+            "Replaced float division with modulus (AOR)"));
+    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FADD,
+            "Replaced float modulus with addition (AOR)"));
+    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FSUB,
+            "Replaced float modulus with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FMUL,
             "Replaced float modulus with multiplication (AOR)"));
+    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FDIV,
+            "Replaced float modulus with division (AOR)"));
+
 
     // Doubles
     MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DSUB,
