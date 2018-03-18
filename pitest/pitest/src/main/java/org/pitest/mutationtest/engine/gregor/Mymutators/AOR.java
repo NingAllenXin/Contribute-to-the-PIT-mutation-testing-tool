@@ -62,16 +62,30 @@ class AORMethodVisitor extends AbstractInsnMutator {
             "Replaced integer addition with xor (AOR)"));
      MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.ISHL,
             "Replaced integer addition with shift left (AOR)"));
-    MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.ISHR,
+    MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.ISHR,
             "Replaced integer subtraction with arithmetic shift right (AOR)"));
      MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.IUSHR,
             "Replaced integer addition with logical shift right (AOR)"));
+    MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IADD,
+            "Replaced integer subtraction with addition (AOR)"));
     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IMUL,
             "Replaced integer subtraction with multiplication (AOR)"));
     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer subtraction with division (AOR)"));
     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IREM,
             "Replaced integer subtraction with modulus (AOR)"));
+     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IAND,
+            "Replaced integer subtraction with and (AOR)"));
+    MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IOR,
+            "Replaced integer subtraction with or (AOR)"));
+    MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IXOR,
+            "Replaced integer subtraction with xor (AOR)"));
+     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.ISHL,
+            "Replaced integer subtraction with shift left (AOR)"));
+    MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.ISHR,
+            "Replaced integer subtraction with arithmetic shift right (AOR)"));
+     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IUSHR,
+            "Replaced integer addition with logical shift right (AOR)"));
     MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IADD,
             "Replaced integer multiplication with addition (AOR)"));
     MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.ISUB,
