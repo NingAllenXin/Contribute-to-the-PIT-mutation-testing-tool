@@ -120,10 +120,10 @@ public enum AOD implements MethodMutatorFactory {
 
       
       //pop ignore first one
-      MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.POP2,
-              "(AOD int +)Ignore first character in stuck"));   //+
-          MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.POP2,
-                "(AOD int -)Ignore first character in stuck")); //-
+//      MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.POP2,
+//              "(AOD int +)Ignore first character in stuck"));   //+
+//          MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.POP2,
+//                "(AOD int -)Ignore first character in stuck")); //-
     }
 
     

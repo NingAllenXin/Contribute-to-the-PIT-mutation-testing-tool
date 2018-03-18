@@ -35,6 +35,6 @@ public class AppTest
  public void testApp4()
  {
  		App a=new App();
-     assertEquals( 1,a.addint(0, 1) );
+     assertEquals(2,a.addint(2, 0) );
  }
 }
