@@ -54,6 +54,12 @@ class AORMethodVisitor extends AbstractInsnMutator {
             "Replaced integer addition with division (AOR)"));
     MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.IREM,
             "Replaced integer addition with modulus (AOR)"));
+    MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.IAND,
+            "Replaced integer addition with and (AOR)"));
+    MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.IOR,
+            "Replaced integer addition with or (AOR)"));
+    MUTATIONS.put(Opcodes.IADD, new InsnSubstitution(Opcodes.IXOR,
+            "Replaced integer addition with xor (AOR)"));
     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IADD,
             "Replaced integer subtraction with addition (AOR)"));
     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IMUL,
