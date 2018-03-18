@@ -85,7 +85,7 @@ class AORMethodVisitor extends AbstractInsnMutator {
     MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.ISHR,
             "Replaced integer subtraction with arithmetic shift right (AOR)"));
      MUTATIONS.put(Opcodes.ISUB, new InsnSubstitution(Opcodes.IUSHR,
-            "Replaced integer addition with logical shift right (AOR)"));
+            "Replaced integer subtraction with logical shift right (AOR)"));
     MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IADD,
             "Replaced integer multiplication with addition (AOR)"));
     MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.ISUB,
@@ -94,6 +94,18 @@ class AORMethodVisitor extends AbstractInsnMutator {
             "Replaced integer multiplication with division (AOR)"));
     MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IREM,
             "Replaced integer multiplication with modulus (AOR)"));
+    MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IAND,
+            "Replaced integer multiplication with and (AOR)"));
+    MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IOR,
+            "Replaced integer multiplication with or (AOR)"));
+    MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IXOR,
+            "Replaced integer multiplication with xor (AOR)"));
+     MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.ISHL,
+            "Replaced integer multiplication with shift left (AOR)"));
+    MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.ISHR,
+            "Replaced integer multiplication with arithmetic shift right (AOR)"));
+     MUTATIONS.put(Opcodes.IMUL, new InsnSubstitution(Opcodes.IUSHR,
+            "Replaced integer multiplication with logical shift right (AOR)"));
     MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.IADD,
             "Replaced integer division with addition (AOR)"));
     MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.ISUB,
@@ -102,6 +114,18 @@ class AORMethodVisitor extends AbstractInsnMutator {
             "Replaced integer division with multiplication (AOR)"));
     MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.IREM,
             "Replaced integer division with modulus (AOR)"));
+     MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.IAND,
+            "Replaced integer division with and (AOR)"));
+    MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.IOR,
+            "Replaced integer division with or (AOR)"));
+    MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.IXOR,
+            "Replaced integer division with xor (AOR)"));
+     MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.ISHL,
+            "Replaced integer division with shift left (AOR)"));
+    MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.ISHR,
+            "Replaced integer division with arithmetic shift right (AOR)"));
+     MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.IUSHR,
+            "Replaced integer division with logical shift right (AOR)"));
     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IADD,
             "Replaced integer modulus with addition (AOR)"));
     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.ISUB,
@@ -110,6 +134,18 @@ class AORMethodVisitor extends AbstractInsnMutator {
             "Replaced integer modulus with multiplication (AOR)"));
     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer modulus with division (AOR)"));
+    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IAND,
+            "Replaced integer modulus with and (AOR)"));
+    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IOR,
+            "Replaced integer modulus with or (AOR)"));
+    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IXOR,
+            "Replaced integer modulus with xor (AOR)"));
+     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.ISHL,
+            "Replaced integer modulus with shift left (AOR)"));
+    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.ISHR,
+            "Replaced integer modulus with arithmetic shift right (AOR)"));
+     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IUSHR,
+            "Replaced integer modulus with logical shift right (AOR)"));
 
     //Longs
     MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LSUB,
