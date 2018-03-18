@@ -6,9 +6,18 @@ package mutationtest.smallapp;
  */
 public class App 
 {
-	public int add(int a,int b)
+	public double add(double a,double b)
 	{
 		return a+b;
+	}
+	public int addint(int a,int b)
+	{
+		return a+b;
+	}
+	
+	public double minus(double a,int b)
+	{
+		return a-b;
 	}
     public static void main( String[] args )
     {
