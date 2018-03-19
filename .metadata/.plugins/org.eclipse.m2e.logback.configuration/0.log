@@ -1679,3 +1679,4 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Failure to fin
 2018-03-16 16:41:20,844 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
 2018-03-16 16:41:20,884 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-03-16 16:41:20,885 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
+2018-03-18 14:39:07,861 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

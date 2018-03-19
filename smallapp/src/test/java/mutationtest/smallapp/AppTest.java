@@ -14,15 +14,15 @@ public class AppTest
     public void testApp()
     {
     		App a=new App();
-        assertEquals( 1.0,a.add(1.0, 0.0) );
+        assertEquals( 1.0,a.add(0.0, 1.0) );
     }
- @Test
-    
-    public void testApp2()
-    {
-    		App a=new App();
-        assertEquals( 5.0,a.add(3.0, 2.0) );
-    }
+// @Test
+//    
+//    public void testApp2()
+//    {
+//    		App a=new App();
+//        assertEquals( 3.0,a.add(0.0, 3.0) );
+//    }
  @Test
  
  public void testApp3()

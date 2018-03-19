@@ -1,6 +1,6 @@
 package org.pitest.mutationtest.engine.gregor.Mymutators;
 
-import java.util.HashMap;  
+import java.util.HashMap;   
 import java.util.Map;
 
 import org.objectweb.asm.MethodVisitor;
@@ -71,27 +71,27 @@ public enum AOD implements MethodMutatorFactory {
 
       // longs   
 
-      MUTATIONS.put(Opcodes.LADD,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LADD,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long +)Ignore second character in stuck"));  
-      MUTATIONS.put(Opcodes.LSUB,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LSUB,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long -)Ignore second character in stuck")); 
-      MUTATIONS.put(Opcodes.LMUL,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LMUL,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long *)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.LDIV,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LDIV,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long /)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.LOR,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LOR,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long ||)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.LAND,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LAND,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long &&)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.LREM,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LREM,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long %)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.LXOR,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LXOR,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long xor)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.LSHL,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LSHL,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long arth left shift)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.LSHR,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LSHR,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long arth right shift)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.LUSHR,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.LUSHR,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long logical right shift)Ignore second character in stuck")); // 
 
       // floats
@@ -107,15 +107,15 @@ public enum AOD implements MethodMutatorFactory {
             "(AOD float %)Ignore second character in stuck")); // 
 
       // doubles
-      MUTATIONS.put(Opcodes.DADD,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.DADD,  new InsnSubstitution(Opcodes.POP2, 
             "(AOD double +)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.DSUB,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.DSUB,  new InsnSubstitution(Opcodes.POP2,
             "(AOD double -)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.DMUL,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.DMUL,  new InsnSubstitution(Opcodes.POP2,
             "(AOD double *)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.DDIV,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.DDIV,  new InsnSubstitution(Opcodes.POP2,
             "(AOD double /)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.DREM,  new InsnSubstitution(Opcodes.POP,
+      MUTATIONS.put(Opcodes.DREM,  new InsnSubstitution(Opcodes.POP2,
             "((AOD double %)Ignore second character in stuck")); // 
 
       
