@@ -12,7 +12,7 @@ import org.pitest.mutationtest.engine.gregor.ZeroOperandMutation;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum AOR implements MethodMutatorFactory {
+public enum AOR2 implements MethodMutatorFactory {
 
   AOR_MUTATOR2;
 
