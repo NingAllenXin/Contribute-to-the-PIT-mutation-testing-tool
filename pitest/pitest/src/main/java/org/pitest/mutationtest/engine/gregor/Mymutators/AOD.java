@@ -113,10 +113,11 @@ public enum AOD implements MethodMutatorFactory {
             "(AOD double -)Ignore second character in stuck")); // 
       MUTATIONS.put(Opcodes.DMUL,  new InsnSubstitution(Opcodes.POP2,
             "(AOD double *)Ignore second character in stuck")); // 
+      MUTATIONS.put(Opcodes.DREM,  new InsnSubstitution(Opcodes.POP2,
+              "((AOD double %)Ignore second character in stuck")); // 
       MUTATIONS.put(Opcodes.DDIV,  new InsnSubstitution(Opcodes.POP2,
             "(AOD double /)Ignore second character in stuck")); // 
-      MUTATIONS.put(Opcodes.DREM,  new InsnSubstitution(Opcodes.POP2,
-            "((AOD double %)Ignore second character in stuck")); // 
+      
 
       
       //pop ignore first one

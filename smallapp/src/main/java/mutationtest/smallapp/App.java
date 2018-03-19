@@ -19,6 +19,17 @@ public class App
 	{
 		return a-b;
 	}
+	
+	public int bigger(int a,int b)
+	{
+	    if(a>=b)
+	    {
+	        return 1;
+	    }
+	    
+        return 0;
+	    
+	}
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
