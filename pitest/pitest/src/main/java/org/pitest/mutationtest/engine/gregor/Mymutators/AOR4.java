@@ -61,263 +61,74 @@ class AORMethodVisitor extends AbstractInsnMutator {
  
     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer modulus with division (AOR)"));
-    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IAND,
-            "Replaced integer modulus with and (AOR)"));
-    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IOR,
-            "Replaced integer modulus with or (AOR)"));
-    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IXOR,
-            "Replaced integer modulus with xor (AOR)"));
-     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.ISHL,
-            "Replaced integer modulus with shift left (AOR)"));
-    MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.ISHR,
-            "Replaced integer modulus with arithmetic shift right (AOR)"));
-     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IUSHR,
-            "Replaced integer modulus with logical shift right (AOR)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
+    
     MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer modulus with division (AOR)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IREM,
-            "Replaced integer modulus with and (AOR)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IOR,
-            "Replaced integer modulus with or (AOR)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IXOR,
-            "Replaced integer modulus with xor (AOR)"));
-     MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.ISHL,
-            "Replaced integer modulus with shift left (AOR)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.ISHR,
-            "Replaced integer modulus with arithmetic shift right (AOR)"));
-     MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IUSHR,
-            "Replaced integer modulus with logical shift right (AOR)"));
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
+   
     MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer modulus with division (AOR)"));
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IREM,
-            "Replaced integer modulus with and (AOR)"));
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IAND,
-            "Replaced integer modulus with or (AOR)"));
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IXOR,
-            "Replaced integer modulus with xor (AOR)"));
-     MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.ISHL,
-            "Replaced integer modulus with shift left (AOR)"));
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.ISHR,
-            "Replaced integer modulus with arithmetic shift right (AOR)"));
-     MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IUSHR,
-            "Replaced integer modulus with logical shift right (AOR)"));
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
+   
     MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer modulus with division (AOR)"));
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IREM,
-            "Replaced integer modulus with and (AOR)"));
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IAND,
-            "Replaced integer modulus with or (AOR)"));
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IOR,
-            "Replaced integer modulus with xor (AOR)"));
-     MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.ISHL,
-            "Replaced integer modulus with shift left (AOR)"));
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.ISHR,
-            "Replaced integer modulus with arithmetic shift right (AOR)"));
-     MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IUSHR,
-            "Replaced integer modulus with logical shift right (AOR)"));
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
+    
     MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer modulus with division (AOR)"));
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IREM,
-            "Replaced integer modulus with and (AOR)"));
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IAND,
-            "Replaced integer modulus with or (AOR)"));
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IOR,
-            "Replaced integer modulus with xor (AOR)"));
-     MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IXOR,
-            "Replaced integer modulus with shift left (AOR)"));
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.ISHR,
-            "Replaced integer modulus with arithmetic shift right (AOR)"));
-     MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IUSHR,
-            "Replaced integer modulus with logical shift right (AOR)"));
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
+   
     MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer modulus with division (AOR)"));
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IREM,
-            "Replaced integer modulus with and (AOR)"));
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IAND,
-            "Replaced integer modulus with or (AOR)"));
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IOR,
-            "Replaced integer modulus with xor (AOR)"));
-     MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IXOR,
-            "Replaced integer modulus with shift left (AOR)"));
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.ISHL,
-            "Replaced integer modulus with arithmetic shift right (AOR)"));
-     MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IUSHR,
-            "Replaced integer modulus with logical shift right (AOR)"));
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
+   
     MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IDIV,
             "Replaced integer modulus with division (AOR)"));
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IREM,
-            "Replaced integer modulus with and (AOR)"));
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IAND,
-            "Replaced integer modulus with or (AOR)"));
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IOR,
-            "Replaced integer modulus with xor (AOR)"));
-     MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IXOR,
-            "Replaced integer modulus with shift left (AOR)"));
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.ISHL,
-            "Replaced integer modulus with arithmetic shift right (AOR)"));
-     MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.ISHR,
-            "Replaced integer modulus with logical shift right (AOR)"));
 
     //Longs
-    MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LSUB,
-            "Replaced long addition with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LMUL,
-            "Replaced long addition with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LDIV,
-            "Replaced long addition with division (AOR)"));
+   
     MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LREM,
             "Replaced long addition with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.LSUB, new InsnSubstitution(Opcodes.LADD,
-            "Replaced long subtraction with addition (AOR)"));
-    MUTATIONS.put(Opcodes.LSUB, new InsnSubstitution(Opcodes.LMUL,
-            "Replaced long subtraction with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.LSUB, new InsnSubstitution(Opcodes.LDIV,
-            "Replaced long subtraction with division (AOR)"));
+   
     MUTATIONS.put(Opcodes.LSUB, new InsnSubstitution(Opcodes.LREM,
             "Replaced long subtraction with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.LMUL, new InsnSubstitution(Opcodes.LADD,
-            "Replaced long multiplication with addition (AOR)"));
-    MUTATIONS.put(Opcodes.LMUL, new InsnSubstitution(Opcodes.LSUB,
-            "Replaced long multiplication with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.LMUL, new InsnSubstitution(Opcodes.LDIV,
-            "Replaced long multiplication with division (AOR)"));
+    
     MUTATIONS.put(Opcodes.LMUL, new InsnSubstitution(Opcodes.LREM,
             "Replaced long multiplication with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.LDIV, new InsnSubstitution(Opcodes.LADD,
-            "Replaced long division with addition (AOR)"));
-    MUTATIONS.put(Opcodes.LDIV, new InsnSubstitution(Opcodes.LSUB,
-            "Replaced long division with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.LDIV, new InsnSubstitution(Opcodes.LMUL,
-            "Replaced long division with multiplication (AOR)"));
+   
     MUTATIONS.put(Opcodes.LDIV, new InsnSubstitution(Opcodes.LREM,
             "Replaced long division with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.LREM, new InsnSubstitution(Opcodes.LADD,
-            "Replaced long modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.LREM, new InsnSubstitution(Opcodes.LSUB,
-            "Replaced long modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.LREM, new InsnSubstitution(Opcodes.LMUL,
-            "Replaced long modulus with multiplication (AOR)"));
+ 
     MUTATIONS.put(Opcodes.LREM, new InsnSubstitution(Opcodes.LDIV,
             "Replaced long modulus with division (AOR)"));
 
     // Floats
-    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FSUB,
-            "Replaced float addition with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FMUL,
-            "Replaced float addition with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FDIV,
-            "Replaced float addition with division (AOR)"));
+   
     MUTATIONS.put(Opcodes.FADD, new InsnSubstitution(Opcodes.FREM,
             "Replaced float addition with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FADD,
-            "Replaced float subtraction with addition (AOR)"));
-    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FMUL,
-            "Replaced float subtraction with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FDIV,
-            "Replaced float subtraction with division (AOR)"));
+    
     MUTATIONS.put(Opcodes.FSUB, new InsnSubstitution(Opcodes.FREM,
             "Replaced float subtraction with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FADD,
-            "Replaced float multiplication with addition (AOR)"));
-    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FSUB,
-            "Replaced float multiplication with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FDIV,
-            "Replaced float multiplication with division (AOR)"));
+    
     MUTATIONS.put(Opcodes.FMUL, new InsnSubstitution(Opcodes.FREM,
             "Replaced float multiplication with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FADD,
-            "Replaced float division with addition (AOR)"));
-    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FSUB,
-            "Replaced float division with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FMUL,
-            "Replaced float division with multiplication (AOR)"));
+    
     MUTATIONS.put(Opcodes.FDIV, new InsnSubstitution(Opcodes.FREM,
             "Replaced float division with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FADD,
-            "Replaced float modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FSUB,
-            "Replaced float modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FMUL,
-            "Replaced float modulus with multiplication (AOR)"));
+    
     MUTATIONS.put(Opcodes.FREM, new InsnSubstitution(Opcodes.FDIV,
             "Replaced float modulus with division (AOR)"));
 
 
     // Doubles
-    MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DSUB,
-            "Replaced double addition with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DMUL,
-            "Replaced double addition with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DDIV,
-            "Replaced double addition with division (AOR)"));
+    
     MUTATIONS.put(Opcodes.DADD, new InsnSubstitution(Opcodes.DREM,
             "Replaced double addition with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.DSUB, new InsnSubstitution(Opcodes.DADD,
-            "Replaced double subtraction with addition (AOR)"));
-    MUTATIONS.put(Opcodes.DSUB, new InsnSubstitution(Opcodes.DMUL,
-            "Replaced double subtraction with multiplication (AOR)"));
-    MUTATIONS.put(Opcodes.DSUB, new InsnSubstitution(Opcodes.DDIV,
-            "Replaced double subtraction with division (AOR)"));
+    
     MUTATIONS.put(Opcodes.DSUB, new InsnSubstitution(Opcodes.DREM,
             "Replaced double subtraction with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.DMUL, new InsnSubstitution(Opcodes.DADD,
-            "Replaced double multiplication with addition (AOR)"));
-    MUTATIONS.put(Opcodes.DMUL, new InsnSubstitution(Opcodes.DSUB,
-            "Replaced double multiplication with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.DMUL, new InsnSubstitution(Opcodes.DDIV,
-            "Replaced double multiplication with division (AOR)"));
+   
     MUTATIONS.put(Opcodes.DMUL, new InsnSubstitution(Opcodes.DREM,
             "Replaced double multiplication with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.DDIV, new InsnSubstitution(Opcodes.DADD,
-            "Replaced double division with addition (AOR)"));
-    MUTATIONS.put(Opcodes.DDIV, new InsnSubstitution(Opcodes.DSUB,
-            "Replaced double division with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.DDIV, new InsnSubstitution(Opcodes.DMUL,
-            "Replaced double division with multiplication (AOR)"));
+   
     MUTATIONS.put(Opcodes.DDIV, new InsnSubstitution(Opcodes.DREM,
             "Replaced double division with modulus (AOR)"));
-    MUTATIONS.put(Opcodes.DREM, new InsnSubstitution(Opcodes.DADD,
-            "Replaced double modulus with addition (AOR)"));
-    MUTATIONS.put(Opcodes.DREM, new InsnSubstitution(Opcodes.DSUB,
-            "Replaced double modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.DREM, new InsnSubstitution(Opcodes.DMUL,
-            "Replaced double modulus with multiplication (AOR)"));
+    
     MUTATIONS.put(Opcodes.DREM, new InsnSubstitution(Opcodes.DDIV,
             "Replaced double modulus with division (AOR)"));
 
