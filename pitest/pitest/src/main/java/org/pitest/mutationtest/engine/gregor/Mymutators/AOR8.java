@@ -34,9 +34,9 @@ public enum AOR8 implements MethodMutatorFactory {
 
 }
 
-class AORMethodVisitor extends AbstractInsnMutator {
+class AOR8MethodVisitor extends AbstractInsnMutator {
 
-  AORMethodVisitor(final MethodMutatorFactory factory,
+  AOR8MethodVisitor(final MethodMutatorFactory factory,
                    final MethodInfo methodInfo, final MutationContext context,
                    final MethodVisitor writer) {
     super(factory, methodInfo, context, writer);
