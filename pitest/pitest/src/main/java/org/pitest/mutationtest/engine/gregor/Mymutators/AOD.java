@@ -55,9 +55,9 @@ public enum AOD implements MethodMutatorFactory {
       MUTATIONS.put(Opcodes.IDIV, new InsnSubstitution(Opcodes.POP,
             "(AOD int /)Ignore second character in stuck")); // _/
       MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.POP,
-            "(AOD int ||)Ignore second character in stuck")); // binary 'or'   
+            "(AOD int |)Ignore second character in stuck")); // binary 'or'   
       MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.POP,
-            "(AOD int &&)Ignore second character in stuck")); // binary 'and' 
+            "(AOD int &)Ignore second character in stuck")); // binary 'and' 
       MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.POP,
             "(AOD int %)Ignore second character in stuck")); // % 
       MUTATIONS.put(Opcodes.IXOR,  new InsnSubstitution(Opcodes.POP,
@@ -80,9 +80,9 @@ public enum AOD implements MethodMutatorFactory {
       MUTATIONS.put(Opcodes.LDIV,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long /)Ignore second character in stuck")); // 
       MUTATIONS.put(Opcodes.LOR,  new InsnSubstitution(Opcodes.POP2,
-            "(AOD long ||)Ignore second character in stuck")); // 
+            "(AOD long |)Ignore second character in stuck")); // 
       MUTATIONS.put(Opcodes.LAND,  new InsnSubstitution(Opcodes.POP2,
-            "(AOD long &&)Ignore second character in stuck")); // 
+            "(AOD long &)Ignore second character in stuck")); // 
       MUTATIONS.put(Opcodes.LREM,  new InsnSubstitution(Opcodes.POP2,
             "(AOD long %)Ignore second character in stuck")); // 
       MUTATIONS.put(Opcodes.LXOR,  new InsnSubstitution(Opcodes.POP2,
