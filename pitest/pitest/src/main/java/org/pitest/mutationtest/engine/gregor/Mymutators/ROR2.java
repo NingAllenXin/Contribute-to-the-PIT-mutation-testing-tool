@@ -67,9 +67,6 @@ class RORMethodVisitor extends AbstractJumpMutator {
     
     MUTATIONS.put(Opcodes.IF_ICMPLT, new Substitution(Opcodes.IF_ICMPEQ, DESCRIPTION));
     
-    // Compares two object references and if they refer to the same object, then they are equal
-    MUTATIONS.put(Opcodes.IF_ACMPEQ, new Substitution(Opcodes.IF_ACMPNE, DESCRIPTION));
-    MUTATIONS.put(Opcodes.IF_ACMPNE, new Substitution(Opcodes.IF_ACMPEQ, DESCRIPTION));
   }
 
   RORMethodVisitor(final MethodMutatorFactory factory,
