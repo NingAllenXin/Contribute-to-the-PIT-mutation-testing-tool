@@ -32,7 +32,7 @@
         
          <configuration>
              <mutators>
-                 <mutator>AOD</mutator>
+                 <mutator>AOD_IgnoreFirst</mutator>
               
              </mutators>
          </configuration>

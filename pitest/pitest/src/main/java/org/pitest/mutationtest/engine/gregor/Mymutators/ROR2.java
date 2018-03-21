@@ -17,7 +17,7 @@ public enum ROR2 implements MethodMutatorFactory {
   @Override
   public MethodVisitor create(final MutationContext context,
                               final MethodInfo methodInfo, final MethodVisitor methodVisitor) {
-    return new RORMethodVisitor(this, context, methodVisitor);
+    return new ROR2MethodVisitor(this, context, methodVisitor);
   }
 
   @Override
@@ -32,7 +32,7 @@ public enum ROR2 implements MethodMutatorFactory {
 
 }
 
-class RORMethodVisitor extends AbstractJumpMutator {
+class ROR2MethodVisitor extends AbstractJumpMutator {
 
   private static final String                     DESCRIPTION = "Relational operator replacement mutation (ROR)";
   private static final Map<Integer, Substitution> MUTATIONS   = new HashMap<Integer, Substitution>();
@@ -69,7 +69,7 @@ class RORMethodVisitor extends AbstractJumpMutator {
     
   }
 
-  RORMethodVisitor(final MethodMutatorFactory factory,
+  ROR2MethodVisitor(final MethodMutatorFactory factory,
                    final MutationContext context, final MethodVisitor delegateMethodVisitor) {
     super(factory, context, delegateMethodVisitor);
   }
