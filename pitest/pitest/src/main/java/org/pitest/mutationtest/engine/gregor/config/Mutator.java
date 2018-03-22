@@ -14,7 +14,7 @@
  */
 package org.pitest.mutationtest.engine.gregor.config;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;  
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -33,8 +33,14 @@ import org.pitest.help.PitHelpError;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AODIgnoreSecond;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AODIgnoreFirst;
-import org.pitest.mutationtest.engine.gregor.Mymutators.AOR;
-import org.pitest.mutationtest.engine.gregor.Mymutators.ROR;
+import org.pitest.mutationtest.engine.gregor.Mymutators.AOR2;
+import org.pitest.mutationtest.engine.gregor.Mymutators.AOR3;
+import org.pitest.mutationtest.engine.gregor.Mymutators.AOR4;
+import org.pitest.mutationtest.engine.gregor.Mymutators.ROR1;
+import org.pitest.mutationtest.engine.gregor.Mymutators.ROR2;
+import org.pitest.mutationtest.engine.gregor.Mymutators.ROR3;
+import org.pitest.mutationtest.engine.gregor.Mymutators.ROR4;
+import org.pitest.mutationtest.engine.gregor.Mymutators.ROR5;
 import org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.BooleanFalseReturnValsMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.BooleanTrueReturnValsMutator;
@@ -86,10 +92,20 @@ public final class Mutator {
      */
     add("MATH", MathMutator.MATH_MUTATOR);
     add("AOD_IgnoreFirst", new AODIgnoreFirst());   //DiJin    added   test================================================================
+    add("AOD_IgnoreSecond",AODIgnoreSecond.AOD_MUTATOR);   //DiJin    added   test================================================================
+    
+    add("AOR1",AOR1.AOR_MUTATOR);//Ning Xin  added test=================================================
+    add("AOR2",AOR2.AOR_MUTATOR2);
+    add("AOR3",AOR3.AOR_MUTATOR3);
+    add("AOR4",AOR4.AOR_MUTATOR4);
+    
+    add("ROR1",ROR1.ROR_MUTATOR);
+    add("ROR2",ROR2.ROR_MUTATOR2);
+    add("ROR3",ROR3.ROR_MUTATOR3);
+    add("ROR4",ROR4.ROR_MUTATOR4);
+    add("ROR5",ROR5.ROR_MUTATOR5);
 
-    add("AOD",AODIgnoreSecond.AOD_MUTATOR);   //DiJin    added   test================================================================
-    add("AOR",AOR.AOR_MUTATOR);//Ning Xin  added test=================================================
-    add("ROR",ROR.ROR_MUTATOR);//Ning Xin  added test=================================================
+    add("ROR",ROR1.ROR_MUTATOR);//Ning Xin  added test=================================================
     /**
      * Default mutator that removes method calls to void methods.
      *

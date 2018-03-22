@@ -62,23 +62,23 @@ class AOR3MethodVisitor extends AbstractInsnMutator {
     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IMUL,
             "Replaced integer modulus with multiplication (AOR)"));
     
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
-    
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
-    
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
-    
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
-    
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
-    
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IMUL,
-            "Replaced integer modulus with multiplication (AOR)"));
+//    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IMUL,
+//            "Replaced integer modulus with multiplication (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IMUL,
+//            "Replaced integer modulus with multiplication (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IMUL,
+//            "Replaced integer modulus with multiplication (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IMUL,
+//            "Replaced integer modulus with multiplication (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IMUL,
+//            "Replaced integer modulus with multiplication (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IMUL,
+//            "Replaced integer modulus with multiplication (AOR)"));
     
 
     //Longs

@@ -12,7 +12,7 @@ import org.pitest.mutationtest.engine.gregor.ZeroOperandMutation;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum AOR implements MethodMutatorFactory {
+public enum AOR1 implements MethodMutatorFactory {
 
   AOR_MUTATOR;
 
@@ -61,23 +61,23 @@ class AORMethodVisitor extends AbstractInsnMutator {
     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.IADD,
             "Replaced integer modulus with addition (AOR)"));
     
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-   
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
-    
-    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IADD,
-            "Replaced integer modulus with addition (AOR)"));
+//    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IADD,
+//            "Replaced integer modulus with addition (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IADD,
+//            "Replaced integer modulus with addition (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IADD,
+//            "Replaced integer modulus with addition (AOR)"));
+//   
+//    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IADD,
+//            "Replaced integer modulus with addition (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IADD,
+//            "Replaced integer modulus with addition (AOR)"));
+//    
+//    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IADD,
+//            "Replaced integer modulus with addition (AOR)"));
    
 
     //Longs

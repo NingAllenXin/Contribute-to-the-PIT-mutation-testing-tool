@@ -10,7 +10,7 @@ import org.pitest.mutationtest.engine.gregor.MutationContext;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum ROR implements MethodMutatorFactory {
+public enum ROR1 implements MethodMutatorFactory {
 
   ROR_MUTATOR;
 
@@ -34,36 +34,36 @@ public enum ROR implements MethodMutatorFactory {
 
 class RORMethodVisitor extends AbstractJumpMutator {
 
-  private static final String                     DESCRIPTION = "Relational operator replacement mutation (ROR)";
+  private static final String                     DESCRIPTION = "Replace = with != (ROR)";
   private static final Map<Integer, Substitution> MUTATIONS   = new HashMap<Integer, Substitution>();
 
   static {
     // Compares a single value to 0
-    MUTATIONS.put(Opcodes.IFEQ, new Substitution(Opcodes.IFNE, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFEQ, new Substitution(Opcodes.IFNE, "Replace = with <> (ROR)"));
   
-    MUTATIONS.put(Opcodes.IFNE, new Substitution(Opcodes.IFEQ, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFNE, new Substitution(Opcodes.IFEQ, "Replace <> with = (ROR)"));
     
-    MUTATIONS.put(Opcodes.IFLE, new Substitution(Opcodes.IFEQ, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFLE, new Substitution(Opcodes.IFEQ, "Replace <= with = (ROR)"));
     
-    MUTATIONS.put(Opcodes.IFGE, new Substitution(Opcodes.IFEQ, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFGE, new Substitution(Opcodes.IFEQ, "Replace >= with = (ROR)"));
    
-    MUTATIONS.put(Opcodes.IFGT, new Substitution(Opcodes.IFEQ, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFGT, new Substitution(Opcodes.IFEQ, "Replace > with = (ROR)"));
     
-    MUTATIONS.put(Opcodes.IFLT, new Substitution(Opcodes.IFEQ, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFLT, new Substitution(Opcodes.IFEQ, "Replace < with = (ROR)"));
    
 
     // Compares two values
-    MUTATIONS.put(Opcodes.IF_ICMPNE, new Substitution(Opcodes.IF_ICMPEQ, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPNE, new Substitution(Opcodes.IF_ICMPEQ, "Replace <> with = (ROR)"));
    
-    MUTATIONS.put(Opcodes.IF_ICMPEQ, new Substitution(Opcodes.IF_ICMPNE, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPEQ, new Substitution(Opcodes.IF_ICMPNE, "Replace = with <> (ROR)"));
    
-    MUTATIONS.put(Opcodes.IF_ICMPLE, new Substitution(Opcodes.IF_ICMPNE, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPLE, new Substitution(Opcodes.IF_ICMPNE, "Replace < with <> (ROR)"));
     
-    MUTATIONS.put(Opcodes.IF_ICMPGE, new Substitution(Opcodes.IF_ICMPNE, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPGE, new Substitution(Opcodes.IF_ICMPNE, "Replace >= with <> (ROR)"));
     
-    MUTATIONS.put(Opcodes.IF_ICMPGT, new Substitution(Opcodes.IF_ICMPNE, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPGT, new Substitution(Opcodes.IF_ICMPNE, "Replace > with <> (ROR)"));
    
-    MUTATIONS.put(Opcodes.IF_ICMPLT, new Substitution(Opcodes.IF_ICMPNE, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPLT, new Substitution(Opcodes.IF_ICMPNE, "Replace < with <> (ROR)"));
     
 
     // Compares two object references and if they refer to the same object, then they are equal

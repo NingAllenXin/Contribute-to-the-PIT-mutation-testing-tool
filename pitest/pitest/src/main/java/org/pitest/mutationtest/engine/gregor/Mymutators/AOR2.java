@@ -19,7 +19,7 @@ public enum AOR2 implements MethodMutatorFactory {
   @Override
   public MethodVisitor create(final MutationContext context,
                               final MethodInfo methodInfo, final MethodVisitor methodVisitor) {
-    return new AORMethodVisitor(this, methodInfo, context, methodVisitor);
+    return new AOR2MethodVisitor(this, methodInfo, context, methodVisitor);
   }
 
   @Override
@@ -56,16 +56,16 @@ class AOR2MethodVisitor extends AbstractInsnMutator {
             "Replaced integer division with subtraction (AOR)"));
     MUTATIONS.put(Opcodes.IREM, new InsnSubstitution(Opcodes.ISUB,
             "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
-    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.ISUB,
-            "Replaced integer modulus with subtraction (AOR)"));
+//    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.ISUB,
+//            "Replaced integer modulus with subtraction (AOR)"));
+//    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.ISUB,
+//            "Replaced integer modulus with subtraction (AOR)"));
+//    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.ISUB,
+//            "Replaced integer modulus with subtraction (AOR)"));
+//    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.ISUB,
+//            "Replaced integer modulus with subtraction (AOR)"));
+//    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.ISUB,
+//            "Replaced integer modulus with subtraction (AOR)"));
 
     //Longs
     MUTATIONS.put(Opcodes.LADD, new InsnSubstitution(Opcodes.LMUL,

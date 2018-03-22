@@ -19,7 +19,7 @@ public enum AOR5 implements MethodMutatorFactory {
   @Override
   public MethodVisitor create(final MutationContext context,
                               final MethodInfo methodInfo, final MethodVisitor methodVisitor) {
-    return new AORMethodVisitor(this, methodInfo, context, methodVisitor);
+    return new AOR5MethodVisitor(this, methodInfo, context, methodVisitor);
   }
 
   @Override

@@ -40,31 +40,31 @@ class ROR5MethodVisitor extends AbstractJumpMutator {
   static {
     // Compares a single value to 0
     
-    MUTATIONS.put(Opcodes.IFEQ, new Substitution(Opcodes.IFLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFEQ, new Substitution(Opcodes.IFLT, "Replace = with < (ROR)"));
     
-    MUTATIONS.put(Opcodes.IFNE, new Substitution(Opcodes.IFLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFNE, new Substitution(Opcodes.IFLT, "Replace <> with < (ROR)"));
     
-    MUTATIONS.put(Opcodes.IFLE, new Substitution(Opcodes.IFLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFLE, new Substitution(Opcodes.IFLT, "Replace <= with < (ROR)"));
    
-    MUTATIONS.put(Opcodes.IFGE, new Substitution(Opcodes.IFLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFGE, new Substitution(Opcodes.IFLT, "Replace >= with < (ROR)"));
     
-    MUTATIONS.put(Opcodes.IFGT, new Substitution(Opcodes.IFLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFGT, new Substitution(Opcodes.IFLT, "Replace > with < (ROR)"));
    
-    MUTATIONS.put(Opcodes.IFLT, new Substitution(Opcodes.IFGT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IFLT, new Substitution(Opcodes.IFGT, "Replace < with > (ROR)"));
 
     // Compares two values
     
-    MUTATIONS.put(Opcodes.IF_ICMPNE, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPNE, new Substitution(Opcodes.IF_ICMPLT, "Replace <> with < (ROR)"));
     
-    MUTATIONS.put(Opcodes.IF_ICMPEQ, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPEQ, new Substitution(Opcodes.IF_ICMPLT, "Replace = with < (ROR)"));
    
-    MUTATIONS.put(Opcodes.IF_ICMPLE, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPLE, new Substitution(Opcodes.IF_ICMPLT, "Replace <= with < (ROR)"));
    
-    MUTATIONS.put(Opcodes.IF_ICMPGE, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPGE, new Substitution(Opcodes.IF_ICMPLT, "Replace >= with < (ROR)"));
    
-    MUTATIONS.put(Opcodes.IF_ICMPGT, new Substitution(Opcodes.IF_ICMPLT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPGT, new Substitution(Opcodes.IF_ICMPLT, "Replace > with < (ROR)"));
     
-    MUTATIONS.put(Opcodes.IF_ICMPLT, new Substitution(Opcodes.IF_ICMPGT, DESCRIPTION));
+    MUTATIONS.put(Opcodes.IF_ICMPLT, new Substitution(Opcodes.IF_ICMPGT, "Replace < with > (ROR)"));
 
   }
 
