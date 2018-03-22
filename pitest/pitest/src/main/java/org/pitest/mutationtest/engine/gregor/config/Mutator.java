@@ -31,7 +31,7 @@ import org.pitest.functional.prelude.Prelude;
 import org.pitest.help.Help;
 import org.pitest.help.PitHelpError;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
-import org.pitest.mutationtest.engine.gregor.Mymutators.AOD;
+import org.pitest.mutationtest.engine.gregor.Mymutators.AODIgnoreSecond;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AODIgnoreFirst;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR;
@@ -87,7 +87,7 @@ public final class Mutator {
     add("MATH", MathMutator.MATH_MUTATOR);
     add("AOD_IgnoreFirst", new AODIgnoreFirst());   //DiJin    added   test================================================================
 
-    add("AOD",AOD.AOD_MUTATOR);   //DiJin    added   test================================================================
+    add("AOD",AODIgnoreSecond.AOD_MUTATOR);   //DiJin    added   test================================================================
     add("AOR",AOR.AOR_MUTATOR);//Ning Xin  added test=================================================
     add("ROR",ROR.ROR_MUTATOR);//Ning Xin  added test=================================================
     /**

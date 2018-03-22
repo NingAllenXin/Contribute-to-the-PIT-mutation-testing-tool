@@ -12,7 +12,7 @@ import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.MutationContext;
 import org.pitest.mutationtest.engine.gregor.ZeroOperandMutation; 
 
-public enum AOD implements MethodMutatorFactory {
+public enum AODIgnoreSecond implements MethodMutatorFactory {
 
    AOD_MUTATOR;
 

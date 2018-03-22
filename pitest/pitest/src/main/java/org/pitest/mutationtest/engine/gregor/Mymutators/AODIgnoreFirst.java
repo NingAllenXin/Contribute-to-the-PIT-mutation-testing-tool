@@ -2,6 +2,7 @@ package org.pitest.mutationtest.engine.gregor.Mymutators;
 
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
+import org.pitest.mutationtest.engine.MutationIdentifier;
 import org.pitest.mutationtest.engine.gregor.MethodInfo;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.MutationContext;
@@ -12,38 +13,36 @@ public class AODIgnoreFirst implements MethodMutatorFactory {
     @Override
     public MethodVisitor create(MutationContext context, MethodInfo methodInfo, MethodVisitor methodVisitor) {
         // TODO Auto-generated method stub
-        return null;
+        return new AODigFirVisitor(this, context, methodVisitor);
     }
 
     @Override
     public String getGloballyUniqueId() {
         // TODO Auto-generated method stub
-        return null;
+        return this.getClass().getName();
     }
 
     @Override
     public String getName() {
         // TODO Auto-generated method stub
-        return null;
+        return toString();
     }
 
     public final class AODigFirVisitor extends MethodVisitor {
         
-        private final String               description;
         private final MutationContext      context;
         private final MethodMutatorFactory factory;
         
         AODigFirVisitor(final MethodMutatorFactory factory,
                 final MutationContext context,
-                final MethodVisitor delegateMethodVisitor, String description) {
+                final MethodVisitor delegateMethodVisitor) {
               super(Opcodes.ASM6, delegateMethodVisitor);
               this.context = context;
               this.factory = factory;
-              this.description = description;
             }
         
        @Override
-       public void visitInsn(int bytecode) {
+       public void visitInsn(final int bytecode) {
            if ((bytecode == Opcodes.IADD) 
              || (bytecode == Opcodes.ISUB)
              || (bytecode == Opcodes.IMUL)
@@ -54,10 +53,12 @@ public class AODIgnoreFirst implements MethodMutatorFactory {
              || (bytecode == Opcodes.FMUL)
              || (bytecode == Opcodes.FDIV)
              || (bytecode == Opcodes.FREM)) {
-               super.visitInsn(Opcodes.SWAP);
-               super.visitInsn(Opcodes.POP);
-           }
-           if ((bytecode == Opcodes.DADD) 
+               final MutationIdentifier mutationId = this.context.registerMutation(new AODIgnoreFirst(),
+                       "Keep second operand with SWAP");
+               super.mv.visitInsn(Opcodes.SWAP);
+               super.mv.visitInsn(Opcodes.POP);
+           
+           } else if ((bytecode == Opcodes.DADD) 
              || (bytecode == Opcodes.DSUB)
              || (bytecode == Opcodes.DMUL)
              || (bytecode == Opcodes.DDIV)
@@ -67,15 +68,17 @@ public class AODIgnoreFirst implements MethodMutatorFactory {
              || (bytecode == Opcodes.LMUL)
              || (bytecode == Opcodes.LDIV)
              || (bytecode == Opcodes.LREM)) {
+               final MutationIdentifier mutationId = this.context.registerMutation(new AODIgnoreFirst(),
+                       "Keep second operand with DUP2_X2");
                  super.visitInsn(Opcodes.DUP2_X2);
-                 super.visitInsn(Opcodes.POP2);
-                 super.visitInsn(Opcodes.POP2);
+                 super.mv.visitInsn(Opcodes.POP2);
+                 super.mv.visitInsn(Opcodes.POP2);
                
            } else {
                super.visitInsn(bytecode);
                }
            }
-   
+           
 
     }
 }
