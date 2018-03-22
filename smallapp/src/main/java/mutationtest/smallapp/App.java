@@ -20,7 +20,7 @@ public class App
 //		return a-b;
 //	}
 //	
-	public int bigger(int a,int b)
+	public int biggerequal(int a,int b)
 	{
 	    if(a>=b)
 	    {

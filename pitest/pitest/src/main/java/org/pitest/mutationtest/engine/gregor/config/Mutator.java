@@ -33,6 +33,7 @@ import org.pitest.help.PitHelpError;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AODIgnoreSecond;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AODIgnoreFirst;
+import org.pitest.mutationtest.engine.gregor.Mymutators.AOR1;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR2;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR3;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR4;
@@ -91,6 +92,8 @@ public final class Mutator {
      * Default mutator that mutates binary arithmetic operations.
      */
     add("MATH", MathMutator.MATH_MUTATOR);
+    
+    addGroup("OurMutators", ourMutators());
     add("AOD_IgnoreFirst", new AODIgnoreFirst());   //DiJin    added   test================================================================
     add("AOD_IgnoreSecond",AODIgnoreSecond.AOD_MUTATOR);   //DiJin    added   test================================================================
     
@@ -98,14 +101,12 @@ public final class Mutator {
     add("AOR2",AOR2.AOR_MUTATOR2);
     add("AOR3",AOR3.AOR_MUTATOR3);
     add("AOR4",AOR4.AOR_MUTATOR4);
-    
     add("ROR1",ROR1.ROR_MUTATOR);
     add("ROR2",ROR2.ROR_MUTATOR2);
     add("ROR3",ROR3.ROR_MUTATOR3);
     add("ROR4",ROR4.ROR_MUTATOR4);
     add("ROR5",ROR5.ROR_MUTATOR5);
 
-    add("ROR",ROR1.ROR_MUTATOR);//Ning Xin  added test=================================================
     /**
      * Default mutator that removes method calls to void methods.
      *
@@ -212,7 +213,21 @@ public final class Mutator {
         group(new RemoveConditionalMutator(Choice.EQUAL, false),
             new SwitchMutator()));
   }
-
+//==========================
+  private static Collection<MethodMutatorFactory> ourMutators() {
+      return group(new AODIgnoreFirst(),
+                   AODIgnoreSecond.AOD_MUTATOR,
+                   AOR1.AOR_MUTATOR,
+                   AOR2.AOR_MUTATOR2,
+                   AOR3.AOR_MUTATOR3,
+                   AOR4.AOR_MUTATOR4,
+                   ROR1.ROR_MUTATOR,
+                   ROR2.ROR_MUTATOR2,
+                   ROR3.ROR_MUTATOR3,
+                   ROR4.ROR_MUTATOR4,
+                   ROR5.ROR_MUTATOR5);
+  }
+  
   private static Collection<MethodMutatorFactory> combine(
       Collection<MethodMutatorFactory> a, Collection<MethodMutatorFactory> b) {
     final List<MethodMutatorFactory> l = new ArrayList<>(a);

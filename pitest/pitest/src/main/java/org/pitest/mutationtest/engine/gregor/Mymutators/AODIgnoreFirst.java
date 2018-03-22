@@ -55,8 +55,8 @@ public class AODIgnoreFirst implements MethodMutatorFactory {
              || (bytecode == Opcodes.FREM)) {
                final MutationIdentifier mutationId = this.context.registerMutation(new AODIgnoreFirst(),
                        "Keep second operand with SWAP");
-               super.mv.visitInsn(Opcodes.SWAP);
-               super.mv.visitInsn(Opcodes.POP);
+               super.visitInsn(Opcodes.SWAP);
+               super.visitInsn(Opcodes.POP);
            
            } else if ((bytecode == Opcodes.DADD) 
              || (bytecode == Opcodes.DSUB)
@@ -71,8 +71,8 @@ public class AODIgnoreFirst implements MethodMutatorFactory {
                final MutationIdentifier mutationId = this.context.registerMutation(new AODIgnoreFirst(),
                        "Keep second operand with DUP2_X2");
                  super.visitInsn(Opcodes.DUP2_X2);
-                 super.mv.visitInsn(Opcodes.POP2);
-                 super.mv.visitInsn(Opcodes.POP2);
+                 super.visitInsn(Opcodes.POP2);
+                 super.visitInsn(Opcodes.POP2);
                
            } else {
                super.visitInsn(bytecode);

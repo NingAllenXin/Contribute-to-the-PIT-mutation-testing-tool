@@ -52,7 +52,7 @@ public class AppTest
     public void testROR()
     {
            App a=new App();
-        assertEquals( 1,a.bigger(2, 2) ); //2==2 should survive in ROR 
+        assertEquals( 1,a.biggerequal(2, 2) ); //2==2 should have survive mutators in ROR 
     }
 
 }
