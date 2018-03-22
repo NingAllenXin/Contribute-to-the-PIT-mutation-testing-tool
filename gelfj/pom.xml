@@ -85,9 +85,7 @@
         
          <configuration>
              <mutators>
-                 <mutator>AOD</mutator>
-              <mutator>AOR</mutator>
-              <mutator>ROR</mutator>
+                 <mutator>OurMutators</mutator>
              </mutators>
          </configuration>
 

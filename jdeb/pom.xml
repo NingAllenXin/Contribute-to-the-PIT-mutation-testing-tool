@@ -91,6 +91,19 @@
   <build>
     <pluginManagement>
       <plugins>
+      <plugin>
+         <groupId>org.pitest</groupId>
+         <artifactId>pitest-maven</artifactId>
+         <version>1.4.0-SNAPSHOT</version>
+        
+         <configuration>
+             <mutators>
+                 <mutator>OurMutators</mutator>
+             </mutators>
+         </configuration>
+
+             
+     </plugin>
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.4</version>

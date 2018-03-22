@@ -32,11 +32,7 @@
         
          <configuration>
              <mutators>
-                 <mutator>ROR1</mutator>
-                 <mutator>ROR2</mutator>
-                 <mutator>ROR3</mutator>
-                 <mutator>ROR4</mutator>
-                 <mutator>ROR5</mutator>
+                 <mutator>OurMutators</mutator>
               
              </mutators>
          </configuration>
