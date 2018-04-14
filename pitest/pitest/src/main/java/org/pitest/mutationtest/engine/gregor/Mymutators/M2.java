@@ -1,9 +1,11 @@
 package org.pitest.mutationtest.engine.gregor.Mymutators;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
@@ -41,11 +43,19 @@ class Methods {
 }
 class M2SubsituteClassVisitor extends ClassVisitor {   //to get all methods
 
-       Methods classmethods = new Methods();
-       
-     M2SubsituteClassVisitor(int arg0) {
-        super(arg0);
+       M2SubsituteClassVisitor(int api) {
+        super(api);
+        // TODO Auto-generated constructor stub
     }
+//       M2SubsituteClassVisitor() {
+//           // TODO Auto-generated constructor stub
+//           super(a);
+//       }
+    Methods classmethods = new Methods();
+       
+//     M2SubsituteClassVisitor(int arg0) {
+//        super(arg0);
+//    }
      
      
      @Override
@@ -72,7 +82,17 @@ class M2SubsituteMethodVisitor extends MethodVisitor {
     }
     public void findOverLoad(String owner, String name, String desc) {    //get all methods of an specific object according to the name
         if (mset.isEmpty()) {
-            
+            ClassReader cr;
+            try {
+                cr = new ClassReader(owner);
+                M2SubsituteClassVisitor cv = new M2SubsituteClassVisitor(); //incomplete
+                cr.accept(cv, 0);
+               //imcomplete    add method accoriding to cv
+                 
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         } else {   //return overload method
             ArrayList<MethodInfo> miSelectedList = new ArrayList<>();
             MethodInfo usingMethod = new MethodInfo();
