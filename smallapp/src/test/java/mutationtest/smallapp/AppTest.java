@@ -47,12 +47,19 @@ public class AppTest
 //           App a=new App();
 //        assertEquals( 3.0,a.minus(5.0, 2.0) ); // should be killed in AOR 
 //    }
+//    @Test
+//    
+//    public void testROR()
+//    {
+//           App a=new App();
+//        assertEquals( 1,a.biggerequal(2, 2) ); //2==2 should have survive mutators in ROR 
+//    }
     @Test
     
-    public void testROR()
+    public void testM1()
     {
-           App a=new App();
-        assertEquals( 1,a.biggerequal(2, 2) ); //2==2 should have survive mutators in ROR 
+           App a= null;
+        assert(new App().checkM1(2,a)==0); //2==2 should have survive mutators in ROR 
     }
 
 }

@@ -37,6 +37,7 @@ import org.pitest.mutationtest.engine.gregor.Mymutators.AOR1;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR2;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR3;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR4;
+import org.pitest.mutationtest.engine.gregor.Mymutators.M1;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR1;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR2;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR3;
@@ -96,6 +97,7 @@ public final class Mutator {
     addGroup("OurMutators", ourMutators());
     add("AOD_IgnoreFirst", new AODIgnoreFirst());   //DiJin    added   test================================================================
     add("AOD_IgnoreSecond",AODIgnoreSecond.AOD_MUTATOR);   //DiJin    added   test================================================================
+    add("M1",new M1()); // Di Jin added
     
     add("AOR1",AOR1.AOR_MUTATOR);//Ning Xin  added test=================================================
     add("AOR2",AOR2.AOR_MUTATOR2);
@@ -216,6 +218,7 @@ public final class Mutator {
 //==========================
   private static Collection<MethodMutatorFactory> ourMutators() {
       return group(new AODIgnoreFirst(),
+                   new M1(),
                    AODIgnoreSecond.AOD_MUTATOR,
                    AOR1.AOR_MUTATOR,
                    AOR2.AOR_MUTATOR2,
@@ -226,6 +229,7 @@ public final class Mutator {
                    ROR3.ROR_MUTATOR3,
                    ROR4.ROR_MUTATOR4,
                    ROR5.ROR_MUTATOR5);
+                   
   }
   
   private static Collection<MethodMutatorFactory> combine(
