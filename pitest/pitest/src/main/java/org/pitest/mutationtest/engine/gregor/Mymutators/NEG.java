@@ -7,6 +7,8 @@ import org.pitest.mutationtest.engine.gregor.MethodInfo;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.MutationContext;
 
+//Mutator to replace a variable by its negation, i.e. a -> -a.
+
 public enum NEG implements MethodMutatorFactory {
 
   NEG;
