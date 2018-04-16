@@ -7,9 +7,9 @@ import org.pitest.mutationtest.engine.gregor.MethodInfo;
 import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.MutationContext;
 
-public enum ABS implements MethodMutatorFactory {
+public enum NEG implements MethodMutatorFactory {
 
-  ABS;
+  NEG;
 
   @Override
   public MethodVisitor create(final MutationContext context,
@@ -28,12 +28,12 @@ public enum ABS implements MethodMutatorFactory {
   }
 }
 
-class ABSMethodVisitor extends MethodVisitor {
+class NEGMethodVisitor extends MethodVisitor {
 
   private final MethodMutatorFactory factory;
   private final MutationContext      context;
 
-  ABSMethodVisitor(final MethodMutatorFactory factory,
+  NEGMethodVisitor(final MethodMutatorFactory factory,
       final MutationContext context, final MethodVisitor delegateMethodVisitor) {
     super(Opcodes.ASM6, delegateMethodVisitor);
     this.factory = factory;
