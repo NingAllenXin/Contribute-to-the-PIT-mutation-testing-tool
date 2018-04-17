@@ -14,6 +14,7 @@ public class App
 //	}
 //	public int addint(int a,int b)
 //	{
+//	    a=a+b;
 //		return a+b;
 //	}
 //	
@@ -36,32 +37,64 @@ public class App
 //	{
 //	    return a*b;
 //	}
-    public int checkM1(int num,App a)
-    {
-        if(num==1)
-        {
-            return a.Int;
-        }
-        else
-        {
-            return new App().Int;
-        }
-    }
-    public int checkM1(int num)
-    {
-        if(num==1)
-        {
-            return null;
-        }
-        else
-        {
-            return new App();
-        }
-    }
+//    public int checkM1(int num,App a)
+//    {
+//        if(num==1)
+//        {
+//            return a.Int;
+//        }
+//        else
+//        {
+//            return new App().Int;
+//        }
+//    }
+//    public App checkM1(int num)
+//    {
+//        if(num==1)
+//        {
+//            return null;
+//        }
+//        else
+//        {
+//            return new App();
+//        }
+//    }
+//    public double checkselfadd(int a)  //a -> a++
+//    {
+//        double b=1.0;
+//        double k=b;
+//        k=b;
+//        return k==1.0?1.0:k;
+//        
+//    }
+//    public double checkselfadd(int a)   //already tested right for NEG
+//    {
+//        double b=1.0;
+//        String s = String.valueOf(b);
+//        
+//        return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
+//        
+//    }
+  public double checkselfadd(int a)   //already tested right for NEG
+  {
+      double b=1.5;
+      String s = String.valueOf(b);
+      System.out.println(b);
+      return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
+      
+  }
+//    public double checkselfadd(int a)
+//    {
+//        double b=1.0;
+//        double t=b;
+//        String s=String.valueOf(b);
+//        return s.equals("1.0")?1.0:(Double.valueOf(s)-1.0);
+//        
+//    }
     public static void main( String[] args )
     {
-        App a=null;
-        new App().checkM1(2,a);
-        
+        App a=new App();
+       //System.out.println(a.checkselfadd(2));
+        a.checkselfadd(2);
     }
 }
