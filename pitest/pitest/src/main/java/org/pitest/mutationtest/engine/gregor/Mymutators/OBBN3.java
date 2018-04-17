@@ -11,9 +11,9 @@ import org.pitest.mutationtest.engine.gregor.ZeroOperandMutation;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum OBBN implements MethodMutatorFactory {
+public enum OBBN3 implements MethodMutatorFactory {
 
-  OBBN;
+  OBBN3;
 
   @Override
   public MethodVisitor create(final MutationContext context,
@@ -45,16 +45,91 @@ class OBBNMethodVisitor extends AbstractInsnMutator {
 
   static {
     //Ints
-    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IAND,
-            "Replaced bitwise OR with AND (OBBN)"));
-    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IOR,
-            "Replaced bitwise AND with OR (OBBN)"));
+
+    MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.ISHL,
+
+           "Replaced bitwise AND with OR (AOR)"));
+
+  
+
+    MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.ISHL,
+
+           "Replaced bitwise OR with AND (AOR)"));
+
+
+
+
+    MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.ISHL,
+
+           "Replaced bitwise OR with AND (AOR)"));
+
+
+
+
+    MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IXOR,
+
+           "Replaced bitwise OR with AND (AOR)"));
+
+
+
+
+    MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IXOR,
+
+           "Replaced bitwise OR with AND (AOR)"));
+
+
+
+
+    MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IXOR,
+
+           "Replaced bitwise OR with AND (AOR)"));
+
+
+
 
     //Longs
-    MUTATIONS.put(Opcodes.LOR, new InsnSubstitution(Opcodes.LAND,
-            "Replaced bitwise OR with AND (OBBN)"));
-    MUTATIONS.put(Opcodes.LAND, new InsnSubstitution(Opcodes.LOR,
+
+    MUTATIONS.put(Opcodes.LAND, new InsnSubstitution(Opcodes.LSHL,
+
             "Replaced bitwise AND with OR (OBBN)"));
+
+
+
+
+    MUTATIONS.put(Opcodes.LOR, new InsnSubstitution(Opcodes.LSHL,
+
+            "Replaced bitwise OR with AND (OBBN)"));
+
+
+
+
+    MUTATIONS.put(Opcodes.LXOR, new InsnSubstitution(Opcodes.LSHL,
+
+            "Replaced bitwise OR with AND (OBBN)"));
+
+
+
+
+    MUTATIONS.put(Opcodes.LSHL, new InsnSubstitution(Opcodes.LXOR,
+
+            "Replaced bitwise OR with AND (OBBN)"));   
+
+
+
+
+    MUTATIONS.put(Opcodes.LSHR, new InsnSubstitution(Opcodes.LXOR,
+
+            "Replaced bitwise OR with AND (OBBN)")); 
+
+
+
+
+    MUTATIONS.put(Opcodes.LUSHR, new InsnSubstitution(Opcodes.LXOR,
+
+            "Replaced bitwise OR with AND (OBBN)"));
+
+
+
   }
 
   @Override
