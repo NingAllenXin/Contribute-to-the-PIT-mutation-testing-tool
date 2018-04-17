@@ -48,7 +48,7 @@ class NEGMethodVisitor extends MethodVisitor {
         final MutationIdentifier newId = this.context.registerMutation(
             this.factory, "Negated integer variable");
         if (this.context.shouldMutate(newId)) {
-           this.mv.visitIntInsn(opcodes, var);
+           this.mv.visitIntInsn(opcode, var);
            this.mv.visitInsn(Opcodes.ICONST_M1);
            this.mv.visitInsn(Opcodes.IMUL);
            this.mv.visitVarInsn(Opcodes.ISTORE, var);
@@ -60,7 +60,7 @@ class NEGMethodVisitor extends MethodVisitor {
         final MutationIdentifier newId = this.context.registerMutation(
             this.factory, "Negated double variable");
         if (this.context.shouldMutate(newId)) {
-          this.mv.visitVarInsn(opcodes, var);
+          this.mv.visitVarInsn(opcode, var);
           this.mv.visitLdcInsn(new Double("-1.0"));
                 this.mv.visitInsn(Opcodes.DMUL);
                 this.mv.visitVarInsn(Opcodes.DSTORE, var);
