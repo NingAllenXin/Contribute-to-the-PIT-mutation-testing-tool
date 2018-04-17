@@ -18,7 +18,7 @@ public enum OBBN5 implements MethodMutatorFactory {
   @Override
   public MethodVisitor create(final MutationContext context,
                               final MethodInfo methodInfo, final MethodVisitor methodVisitor) {
-    return new OBBNMethodVisitor(this, methodInfo, context, methodVisitor);
+    return new OBBNMethodVisitor5(this, methodInfo, context, methodVisitor);
   }
 
   @Override
@@ -33,9 +33,9 @@ public enum OBBN5 implements MethodMutatorFactory {
 
 }
 
-class OBBNMethodVisitor extends AbstractInsnMutator {
+class OBBNMethodVisitor5 extends AbstractInsnMutator {
 
-  OBBNMethodVisitor(final MethodMutatorFactory factory,
+  OBBNMethodVisitor5(final MethodMutatorFactory factory,
                     final MethodInfo methodInfo, final MutationContext context,
                     final MethodVisitor writer) {
     super(factory, methodInfo, context, writer);
