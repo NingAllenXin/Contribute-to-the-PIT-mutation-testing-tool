@@ -38,7 +38,16 @@ import org.pitest.mutationtest.engine.gregor.Mymutators.AOR2;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR3;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AOR4;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AddAfterLoad;
+import org.pitest.mutationtest.engine.gregor.Mymutators.AddBeforeLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.M1;
+import org.pitest.mutationtest.engine.gregor.Mymutators.MinusAfterLoad;
+import org.pitest.mutationtest.engine.gregor.Mymutators.MinusBeforeLoad;
+import org.pitest.mutationtest.engine.gregor.Mymutators.NEG;
+import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN1;
+import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN2;
+import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN3;
+import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN4;
+import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN5;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR1;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR2;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR3;
@@ -110,7 +119,17 @@ public final class Mutator {
     add("ROR4",ROR4.ROR_MUTATOR4);
     add("ROR5",ROR5.ROR_MUTATOR5);
 
-    add("addafterload",new AddAfterLoad());
+    add("OBBN1",OBBN1.OBBN1); //Ning xin
+    add("OBBN2",OBBN2.OBBN2);
+    add("OBBN3",OBBN3.OBBN3);
+    add("OBBN4",OBBN4.OBBN4);
+    add("OBBN5",OBBN5.OBBN5);
+    add("NEG",NEG.NEG);
+    
+    add("addafterload",new AddAfterLoad());//DiJin
+    add("addbeforeload",new AddBeforeLoad());
+    add("minusbeforeload",new MinusBeforeLoad());
+    add("minusfterload",new MinusAfterLoad());
     /**
      * Default mutator that removes method calls to void methods.
      *
