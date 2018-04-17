@@ -21,7 +21,7 @@ public class AppTest
 //    public void testApp4()
 //    {
 //           App a=new App();
-//        assertEquals(2,a.addint(0, 2) );
+//        assertEquals(2,a.addint(2, 0) );
 //        
 //        
 //    }
@@ -58,8 +58,7 @@ public class AppTest
     
     public void testM1()
     {
-           App a= null;
-        assert(new App().checkM1(2,a)==0); //2==2 should have survive mutators in ROR 
+        assertEquals(1.0,new App().checkselfadd(2)); //2==2 should have survive mutators in ROR 
     }
 
 }
