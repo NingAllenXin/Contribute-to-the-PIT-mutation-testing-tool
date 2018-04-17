@@ -11,9 +11,9 @@ import org.pitest.mutationtest.engine.gregor.ZeroOperandMutation;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum OBBN implements MethodMutatorFactory {
+public enum OBBN1 implements MethodMutatorFactory {
 
-  OBBN;
+  OBBN1;
 
   @Override
   public MethodVisitor create(final MutationContext context,
