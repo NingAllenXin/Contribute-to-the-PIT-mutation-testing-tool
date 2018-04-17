@@ -85,8 +85,8 @@ class M2SubsituteMethodVisitor extends MethodVisitor {
             ClassReader cr;
             try {
                 cr = new ClassReader(owner);
-                M2SubsituteClassVisitor cv = new M2SubsituteClassVisitor(); //incomplete
-                cr.accept(cv, 0);
+//                M2SubsituteClassVisitor cv = new M2SubsituteClassVisitor(); //incomplete
+//                cr.accept(cv, 0);
                //imcomplete    add method accoriding to cv
                  
             } catch (IOException e) {
