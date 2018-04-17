@@ -46,35 +46,40 @@ class OBBNMethodVisitor extends AbstractInsnMutator {
   static {
     //Ints
     MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IOR,
-           "Replaced integer modulus with division (AOR)"));
+           "Replaced bitwise AND with OR (AOR)"));
   
     MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced integer modulus with division (AOR)"));
+           "Replaced bitwise OR with AND (AOR)"));
   
     MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced integer modulus with division (AOR)"));
+           "Replaced bitwise OR with AND (AOR)"));
    
     MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IAND,
-           "Replaced integer modulus with division (AOR)"));
+           "Replaced bitwise OR with AND (AOR)"));
   
     MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced integer modulus with division (AOR)"));
+           "Replaced bitwise OR with AND (AOR)"));
   
     MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced integer modulus with division (AOR)"));
+           "Replaced bitwise OR with AND (AOR)"));
 
 
     //Longs
     MUTATIONS.put(Opcodes.LAND, new InsnSubstitution(Opcodes.LOR,
             "Replaced bitwise AND with OR (OBBN)"));
+    
     MUTATIONS.put(Opcodes.LOR, new InsnSubstitution(Opcodes.LAND,
             "Replaced bitwise OR with AND (OBBN)"));
+    
     MUTATIONS.put(Opcodes.LXOR, new InsnSubstitution(Opcodes.LAND,
             "Replaced bitwise OR with AND (OBBN)"));
+    
     MUTATIONS.put(Opcodes.LSHL, new InsnSubstitution(Opcodes.LAND,
             "Replaced bitwise OR with AND (OBBN)"));
+    
     MUTATIONS.put(Opcodes.LSHR, new InsnSubstitution(Opcodes.LAND,
             "Replaced bitwise OR with AND (OBBN)"));
+    
     MUTATIONS.put(Opcodes.LUSHR, new InsnSubstitution(Opcodes.LAND,
             "Replaced bitwise OR with AND (OBBN)"));
 
