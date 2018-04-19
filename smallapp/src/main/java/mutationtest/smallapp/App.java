@@ -79,6 +79,13 @@ public class App
 //      return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
 //      
 //  }
+    
+    public int checkAND(int a) {
+        int a = 1;
+        int b = 2;
+        return a & b == 0 ? 0 : a & b;
+    }
+    
     public double checkselfadd(double a)
     {
         double b=1.0;
