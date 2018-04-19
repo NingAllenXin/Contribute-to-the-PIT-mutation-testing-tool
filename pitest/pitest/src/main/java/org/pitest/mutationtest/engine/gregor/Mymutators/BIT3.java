@@ -11,14 +11,14 @@ import org.pitest.mutationtest.engine.gregor.ZeroOperandMutation;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum OBBN3 implements MethodMutatorFactory {
+public enum BIT3 implements MethodMutatorFactory {
 
-  OBBN3;
+  BIT3;
 
   @Override
   public MethodVisitor create(final MutationContext context,
                               final MethodInfo methodInfo, final MethodVisitor methodVisitor) {
-    return new OBBNMethodVisitor3(this, methodInfo, context, methodVisitor);
+    return new BITMethodVisitor3(this, methodInfo, context, methodVisitor);
   }
 
   @Override
@@ -33,9 +33,9 @@ public enum OBBN3 implements MethodMutatorFactory {
 
 }
 
-class OBBNMethodVisitor3 extends AbstractInsnMutator {
+class BITMethodVisitor3 extends AbstractInsnMutator {
 
-  OBBNMethodVisitor3(final MethodMutatorFactory factory,
+  BITMethodVisitor3(final MethodMutatorFactory factory,
                     final MethodInfo methodInfo, final MutationContext context,
                     final MethodVisitor writer) {
     super(factory, methodInfo, context, writer);
@@ -48,41 +48,41 @@ class OBBNMethodVisitor3 extends AbstractInsnMutator {
 
     MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.ISHL,
 
-           "Replaced bitwise AND with OR (AOR)"));
+           "Replaced bitwise AND with OR (BIT)"));
 
   
 
     MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.ISHL,
 
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (BIT)"));
 
 
 
 
     MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.ISHL,
 
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (BIT)"));
 
 
 
 
     MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IXOR,
 
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (BIT)"));
 
 
 
 
     MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IXOR,
 
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (BIT)"));
 
 
 
 
     MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IXOR,
 
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (BIT)"));
 
 
 
@@ -91,42 +91,42 @@ class OBBNMethodVisitor3 extends AbstractInsnMutator {
 
     MUTATIONS.put(Opcodes.LAND, new InsnSubstitution(Opcodes.LSHL,
 
-            "Replaced bitwise AND with OR (OBBN)"));
+            "Replaced bitwise AND with OR (BIT)"));
 
 
 
 
     MUTATIONS.put(Opcodes.LOR, new InsnSubstitution(Opcodes.LSHL,
 
-            "Replaced bitwise OR with AND (OBBN)"));
+            "Replaced bitwise OR with AND (BIT)"));
 
 
 
 
     MUTATIONS.put(Opcodes.LXOR, new InsnSubstitution(Opcodes.LSHL,
 
-            "Replaced bitwise OR with AND (OBBN)"));
+            "Replaced bitwise OR with AND (BIT)"));
 
 
 
 
     MUTATIONS.put(Opcodes.LSHL, new InsnSubstitution(Opcodes.LXOR,
 
-            "Replaced bitwise OR with AND (OBBN)"));   
+            "Replaced bitwise OR with AND (BIT)"));   
 
 
 
 
     MUTATIONS.put(Opcodes.LSHR, new InsnSubstitution(Opcodes.LXOR,
 
-            "Replaced bitwise OR with AND (OBBN)")); 
+            "Replaced bitwise OR with AND (BIT)")); 
 
 
 
 
     MUTATIONS.put(Opcodes.LUSHR, new InsnSubstitution(Opcodes.LXOR,
 
-            "Replaced bitwise OR with AND (OBBN)"));
+            "Replaced bitwise OR with AND (BIT)"));
 
 
 
@@ -138,3 +138,4 @@ class OBBNMethodVisitor3 extends AbstractInsnMutator {
   }
 
 }
+
