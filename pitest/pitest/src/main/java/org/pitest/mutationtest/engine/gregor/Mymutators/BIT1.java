@@ -18,7 +18,7 @@ public enum BIT1 implements MethodMutatorFactory {
   @Override
   public MethodVisitor create(final MutationContext context,
                               final MethodInfo methodInfo, final MethodVisitor methodVisitor) {
-    return new OBBNMethodVisitor(this, methodInfo, context, methodVisitor);
+    return new BITMethodVisitor1(this, methodInfo, context, methodVisitor);
   }
 
   @Override
@@ -33,9 +33,9 @@ public enum BIT1 implements MethodMutatorFactory {
 
 }
 
-class BITMethodVisitor extends AbstractInsnMutator {
+class BITMethodVisitor1 extends AbstractInsnMutator {
 
-  BITMethodVisitor(final MethodMutatorFactory factory,
+  BITMethodVisitor1(final MethodMutatorFactory factory,
                     final MethodInfo methodInfo, final MutationContext context,
                     final MethodVisitor writer) {
     super(factory, methodInfo, context, writer);

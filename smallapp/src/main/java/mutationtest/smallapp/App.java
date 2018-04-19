@@ -64,14 +64,13 @@ public class App
 //        return k==1.0?1.0:k;
 //        
 //    }
-    public double checkNEG(int a)   //already tested right for NEG
-    {
-        double b=1.0;
-        String s = String.valueOf(b);
-        
-        return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
-        
-    }
+//    public double checkNEG(int a)   //already tested right for NEG
+//    {
+//        double b=1.0;
+//        String s = String.valueOf(b);
+//        return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
+//        
+//    }
 //  public double checkselfadd(int a)   //already tested right for NEG
 //  {
 //      double b=1.5;
@@ -80,14 +79,12 @@ public class App
 //      return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
 //      
 //  }
-//    public double checkselfadd(int a)
-//    {
-//        double b=1.0;
-//        double t=b;
-//        String s=String.valueOf(b);
-//        return s.equals("1.0")?1.0:(Double.valueOf(s)-1.0);
-//        
-//    }
+    public double checkselfadd(double a)
+    {
+        double b=1.0;
+        String s=String.valueOf(b);
+        return s.equals("1.0")?1.0:(Double.valueOf(s));
+    }
     public static void main( String[] args )
     {
         App a=new App();

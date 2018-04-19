@@ -1,6 +1,6 @@
 package org.pitest.mutationtest.engine.gregor.Mymutators;
 
-import org.objectweb.asm.MethodVisitor; 
+import org.objectweb.asm.MethodVisitor;  
 import org.objectweb.asm.Opcodes;
 import org.pitest.mutationtest.engine.gregor.AbstractInsnMutator;
 import org.pitest.mutationtest.engine.gregor.InsnSubstitution;
@@ -147,14 +147,14 @@ import org.pitest.mutationtest.engine.gregor.ZeroOperandMutation;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum OBBN4 implements MethodMutatorFactory {
+public enum BIT4 implements MethodMutatorFactory {
 
-  OBBN4;
+    BIT4;
 
   @Override
   public MethodVisitor create(final MutationContext context,
                               final MethodInfo methodInfo, final MethodVisitor methodVisitor) {
-    return new OBBNMethodVisitor4(this, methodInfo, context, methodVisitor);
+    return new BITMethodVisitor4(this, methodInfo, context, methodVisitor);
   }
 
   @Override

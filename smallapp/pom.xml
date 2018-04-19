@@ -32,7 +32,7 @@
         
          <configuration>
              <mutators>
-                 <mutator>NEG</mutator>
+                 <mutator>addafterload</mutator>
               
              </mutators>
          </configuration>
