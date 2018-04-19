@@ -46,22 +46,22 @@ class OBBNMethodVisitor extends AbstractInsnMutator {
   static {
     //Ints
     MUTATIONS.put(Opcodes.IAND, new InsnSubstitution(Opcodes.IOR,
-           "Replaced bitwise AND with OR (AOR)"));
+           "Replaced bitwise AND with OR (OBBN)"));
   
     MUTATIONS.put(Opcodes.IOR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (OBBN)"));
   
     MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (OBBN)"));
    
     MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (OBBN)"));
   
     MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (OBBN)"));
   
     MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (AOR)"));
+           "Replaced bitwise OR with AND (OBBN)"));
 
 
     //Longs
