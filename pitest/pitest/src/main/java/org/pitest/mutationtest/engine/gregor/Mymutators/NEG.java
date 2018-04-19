@@ -51,11 +51,6 @@ class NEGMethodVisitor extends MethodVisitor {
           this.mv.visitInsn(Opcodes.IMUL);
           this.mv.visitVarInsn(Opcodes.ISTORE, var);
           super.visitVarInsn(opcode, var);
-           this.mv.visitIntInsn(opcode, var);
-           this.mv.visitInsn(Opcodes.ICONST_M1);
-           this.mv.visitInsn(Opcodes.IMUL);
-           this.mv.visitVarInsn(Opcodes.ISTORE, var);
-           super.visitVarInsn(opcode, var);
         } else {
           super.visitVarInsn(opcode, var);
         }
