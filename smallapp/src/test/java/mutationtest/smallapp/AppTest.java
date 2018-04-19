@@ -60,5 +60,9 @@ public class AppTest
     {
         assertEquals(1.0,new App().checkselfadd(99.0));//should survive  becasue 2.0-1.0=1.0
     }
+    
+    public void testBIT(){
+        assertEquals(0, new App().checkAND(1)); // should be killed
+    }
 
 }
