@@ -53,6 +53,7 @@ public class CoverageData implements CoverageDatabase {
   private final Map<ClassName, Map<ClassLine, Set<TestInfo>>> lineCoverage  = new LinkedHashMap<>();
   private final Map<String, Collection<ClassInfo>>            classesForFile;
 
+
   private final CodeSource                                    code;
 
   private final LineMap                                       lm;
@@ -305,10 +306,10 @@ public class CoverageData implements CoverageDatabase {
   private void calculateLinesForBlocks(ClassName className) {
     final Map<BlockLocation, Set<Integer>> lines = this.lm.mapLines(className);
     this.blocksToLines.putAll(lines);
-  }
+  } 
 
   private void recordTestFailure() {
-    this.hasFailedTest = true;
+      this.hasFailedTest = false;
   }
 
   private Function<Entry<BlockLocation, Set<TestInfo>>, Stream<TestInfo>> toTests() {

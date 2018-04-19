@@ -58,7 +58,9 @@ public class AppTest
     
     public void testM1()
     {
-        assertEquals(1.0,new App().checkselfadd(2)); //2==2 should have survive mutators in ROR 
+       
+        assertEquals(1.0,new App().checkNEG(1));
+        //assertEquals(1.0,new App().checkselfadd(2)); //2==2 should have survive mutators in ROR 
     }
 
 }

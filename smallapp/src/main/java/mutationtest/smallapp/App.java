@@ -48,17 +48,14 @@ public class App
 //            return new App().Int;
 //        }
 //    }
-//    public App checkM1(int num)
+//    public int  checkM1(int num)
 //    {
-//        if(num==1)
-//        {
-//            return null;
-//        }
-//        else
-//        {
-//            return new App();
-//        }
+//        App a = null;
+//            
+//            return a.Int;
+//        
 //    }
+
 //    public double checkselfadd(int a)  //a -> a++
 //    {
 //        double b=1.0;
@@ -67,22 +64,22 @@ public class App
 //        return k==1.0?1.0:k;
 //        
 //    }
-//    public double checkselfadd(int a)   //already tested right for NEG
-//    {
-//        double b=1.0;
-//        String s = String.valueOf(b);
-//        
-//        return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
-//        
-//    }
-  public double checkselfadd(int a)   //already tested right for NEG
-  {
-      double b=1.5;
-      String s = String.valueOf(b);
-      System.out.println(b);
-      return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
-      
-  }
+    public double checkNEG(int a)   //already tested right for NEG
+    {
+        double b=1.0;
+        String s = String.valueOf(b);
+        
+        return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
+        
+    }
+//  public double checkselfadd(int a)   //already tested right for NEG
+//  {
+//      double b=1.5;
+//      String s = String.valueOf(b);
+//      System.out.println(b);
+//      return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
+//      
+//  }
 //    public double checkselfadd(int a)
 //    {
 //        double b=1.0;
@@ -95,6 +92,5 @@ public class App
     {
         App a=new App();
        //System.out.println(a.checkselfadd(2));
-        a.checkselfadd(2);
     }
 }

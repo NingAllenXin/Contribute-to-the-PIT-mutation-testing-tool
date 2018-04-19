@@ -32,7 +32,7 @@
         
          <configuration>
              <mutators>
-                 <mutator>M1</mutator>
+                 <mutator>NEG</mutator>
               
              </mutators>
          </configuration>
