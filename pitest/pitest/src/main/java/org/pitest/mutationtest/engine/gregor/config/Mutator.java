@@ -43,11 +43,11 @@ import org.pitest.mutationtest.engine.gregor.Mymutators.M1;
 import org.pitest.mutationtest.engine.gregor.Mymutators.MinusAfterLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.MinusBeforeLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.NEG;
-import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN1;
-import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN2;
-import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN3;
-import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN4;
-import org.pitest.mutationtest.engine.gregor.Mymutators.OBBN5;
+import org.pitest.mutationtest.engine.gregor.Mymutators.BIT1;
+import org.pitest.mutationtest.engine.gregor.Mymutators.BIT2;
+import org.pitest.mutationtest.engine.gregor.Mymutators.BIT3;
+import org.pitest.mutationtest.engine.gregor.Mymutators.BIT4;
+import org.pitest.mutationtest.engine.gregor.Mymutators.BIT5;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR1;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR2;
 import org.pitest.mutationtest.engine.gregor.Mymutators.ROR3;
@@ -119,11 +119,11 @@ public final class Mutator {
     add("ROR4",ROR4.ROR_MUTATOR4);
     add("ROR5",ROR5.ROR_MUTATOR5);
 
-    add("OBBN1",OBBN1.OBBN1); //Ning xin
-    add("OBBN2",OBBN2.OBBN2);
-    add("OBBN3",OBBN3.OBBN3);
-    add("OBBN4",OBBN4.OBBN4);
-    add("OBBN5",OBBN5.OBBN5);
+    add("BIT1",BIT1.BIT1); //Ning xin
+    add("BIT2",BIT2.BIT2);
+    add("BIT3",BIT3.BIT3);
+    add("BIT4",BIT4.BIT4);
+    add("BIT5",BIT5.BIT5);
     add("NEG",NEG.NEG);
     
     add("addafterload",new AddAfterLoad());//DiJin

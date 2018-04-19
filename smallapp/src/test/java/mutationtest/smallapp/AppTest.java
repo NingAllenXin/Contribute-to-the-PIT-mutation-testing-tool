@@ -54,13 +54,14 @@ public class AppTest
 //           App a=new App();
 //        assertEquals( 1,a.biggerequal(2, 2) ); //2==2 should have survive mutators in ROR 
 //    }
+//    @Test
+//    
+//    public void testM1()
+//    {
+//        assertEquals(1.0,new App().checkselfadd(99.0));//should survive  becasue 2.0-1.0=1.0
+//    }
+//    
     @Test
-    
-    public void testM1()
-    {
-        assertEquals(1.0,new App().checkselfadd(99.0));//should survive  becasue 2.0-1.0=1.0
-    }
-    
     public void testBIT(){
         assertEquals(0, new App().checkAND(1)); // should be killed
     }

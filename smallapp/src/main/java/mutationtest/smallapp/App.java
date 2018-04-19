@@ -79,11 +79,17 @@ public class App
 //      return s.equals("1.0")?1.0:Double.valueOf(s.substring(1,s.length()));
 //      
 //  }
-    public double checkselfadd(double a)
-    {
-        double b=1.0;
-        String s=String.valueOf(b++);
-        return s.equals("1.0")?1.0:(Double.valueOf(s));
+//    public double checkselfadd(double a)
+//    {
+//        double b=1.0;
+//        String s=String.valueOf(b++);
+//        return s.equals("1.0")?1.0:(Double.valueOf(s));
+//    }
+    public int checkAND(int c) {
+        int a = 1;
+        int b = 2;
+        String s = String.valueOf((a & b));
+        return s.equals("0") ? 0 : Integer.valueOf(s)-3;
     }
     public static void main( String[] args )
     {

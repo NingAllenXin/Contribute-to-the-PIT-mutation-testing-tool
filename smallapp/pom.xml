@@ -32,7 +32,7 @@
         
          <configuration>
              <mutators>
-                 <mutator>addafterload</mutator>
+                 <mutator>BIT1</mutator>
               
              </mutators>
          </configuration>
