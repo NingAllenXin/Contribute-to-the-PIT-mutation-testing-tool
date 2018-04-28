@@ -54,12 +54,12 @@ class M4 extends MethodVisitor {
             if (variableIndex.contains(var)) {
                 int index = variableIndex.indexOf(var); // get index of the variable in our saved variable list
 
-                Random rand = new Random();
-                idxForRep = rand.nextInt(varIndex.size()); // generate random index for replacment of variable
+                Random random = new Random();
+                idxForRep = random.nextInt(varIndex.size()); // generate random index for replacment of variable
 
                 int numberOfVariable = 0;
-                for (int i = 0; i < varType.size(); i++) {
-                    if (varType.get(i).equals(varType.get(index))) {
+                for (int i = 0; i < variableType.size(); i++) {
+                    if (variableType.get(i).equals(variableType.get(index))) {
                         numberOfVariable++;
                     }
                 }
@@ -70,7 +70,7 @@ class M4 extends MethodVisitor {
                     // current variable OR selected
                     // one does not match type
                     {
-                        idxForRep = rand.nextInt(varIndex.size()); // select a new variable at random
+                        idxForRep = random.nextInt(variableIndex.size()); // select a new variable at random
                     }
                 }
 
