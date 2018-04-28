@@ -1,4 +1,4 @@
-package org.pitest.mutationtest.engine.gregor.mutators.Mymutators;
+package org.pitest.mutationtest.engine.gregor.Mymutators;
 
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
@@ -8,6 +8,7 @@ import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.MutationContext;
 import java.util.Random;
 import java.util.ArrayList;
+import java.util.List;
 
 /*
  * M4 mutator i.e. replace a local variable by another local variable at random
@@ -19,7 +20,7 @@ public enum M4 implements MethodMutatorFactory {
     @Override
     public MethodVisitor create(final MutationContext context, final MethodInfo methodInfo,
             final MethodVisitor methodVisitor) {
-        return new RandomVarReplacement1(this, context, methodVisitor);
+        return new M4visitor(this, context, methodVisitor);
     }
 
     @Override
@@ -33,14 +34,14 @@ public enum M4 implements MethodMutatorFactory {
     }
 }
 
-class M4 extends MethodVisitor {
+class M4visitor extends MethodVisitor {
     private final MethodMutatorFactory factory;
     private final MutationContext context;
     List<Integer> variableIndex = new ArrayList<Integer>();
     List<String> variableType = new ArrayList<String>();
     int idxForRep;
 
-    M4(final MethodMutatorFactory factory, final MutationContext context,
+    M4visitor(final MethodMutatorFactory factory, final MutationContext context,
             final MethodVisitor delegateMethodVisitor) {
         super(Opcodes.ASM6, delegateMethodVisitor);
         this.factory = factory;
@@ -65,11 +66,11 @@ class M4 extends MethodVisitor {
                 }
 
                 if (numberOfVariable > 1) {
-                    while (!(variableType.get(idxForRep).equals(variableType.get(index))) || idxForRep == index)
+                    while (!(variableType.get(idxForRep).equals(variableType.get(index))) || idxForRep == index) {
                     // if random selection is the
                     // current variable OR selected
                     // one does not match type
-                    {
+                    
                         idxForRep = random.nextInt(variableIndex.size()); // select a new variable at random
                     }
                 }
