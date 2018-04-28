@@ -51,12 +51,12 @@ class M4visitor extends MethodVisitor {
     @Override
     public void visitVarInsn(final int opcode, final int var) {
         if (opcode == Opcodes.ILOAD || opcode == Opcodes.LLOAD || opcode == Opcodes.FLOAD || opcode == Opcodes.DLOAD
-                || opcode == Opcodes.ALOAD) { // if load detected and a replacment for this variable has been chosen
+                || opcode == Opcodes.ALOAD) { 
             if (variableIndex.contains(var)) {
-                int index = variableIndex.indexOf(var); // get index of the variable in our saved variable list
+                int index = variableIndex.indexOf(var); 
 
                 Random random = new Random();
-                idxForRep = random.nextInt(variableIndex.size()); // generate random index for replacment of variable
+                idxForRep = random.nextInt(variableIndex.size()); 
 
                 int numberOfVariable = 0; // calculate the number of variables in the same type
                 for (int i = 0; i < variableType.size(); i++) {
@@ -67,20 +67,14 @@ class M4visitor extends MethodVisitor {
 
                 if (numberOfVariable > 1) {
                     while (!(variableType.get(idxForRep).equals(variableType.get(index))) || idxForRep == index) {
-                    // if random selection is the
-                    // current variable OR selected
-                    // one does not match type
-                    
-                        idxForRep = random.nextInt(variableIndex.size()); // select a new variable at random
+                        idxForRep = random.nextInt(variableIndex.size()); 
                     }
                 }
 
                 final MutationIdentifier newId = this.context.registerMutation(this.factory,
                         "Replaced " + variableType.get(index) + " with " + variableType.get(idxForRep));
                 if (this.context.shouldMutate(newId)) {
-                    super.visitVarInsn(opcode, variableIndex.get(idxForRep)); // find index of replacment var in our list, and use
-                                                                 // that index to find index of the replacment variable
-                                                                 // in localvar table
+                    super.visitVarInsn(opcode, variableIndex.get(idxForRep)); 
                 } else {
                     super.visitVarInsn(opcode, var);
                 }
