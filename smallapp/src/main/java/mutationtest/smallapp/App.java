@@ -62,6 +62,14 @@ public class App
          a = 3;  
         return a;
     }
+//    public int checkM2(int i,int j)
+//    {
+//       return 2; 
+//    }
+//    public int checkM2(int i)
+//    {
+//        return 1;
+//    }
 //    public double checkselfadd(int a)  //a -> a++
 //    {
 //        double b=1.0;

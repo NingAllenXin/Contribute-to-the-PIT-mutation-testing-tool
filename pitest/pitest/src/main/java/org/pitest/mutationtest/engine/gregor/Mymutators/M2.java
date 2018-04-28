@@ -29,11 +29,7 @@ public class M2 implements MethodMutatorFactory {
     M2(int methodindex) {
         this.methodindex = methodindex;
     }
-    @Override
-    public String getGloballyUniqueId() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+   
     public static Iterable<MethodMutatorFactory> makeMutators() {
         final List<MethodMutatorFactory> variations = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
@@ -42,10 +38,14 @@ public class M2 implements MethodMutatorFactory {
         return variations;
     }
     @Override
-    public String getName() {
-        // TODO Auto-generated method stub
-        return null;
+    public String getGloballyUniqueId() {
+        return getClass().getName() + "_" + getName();
     }
+
+    @Override
+    public String getName() {
+        return "M2_METHOD_OVERLOADING_MUTATOR_" + (methodindex + 1);
+    } 
 
 }
 class Methods {
