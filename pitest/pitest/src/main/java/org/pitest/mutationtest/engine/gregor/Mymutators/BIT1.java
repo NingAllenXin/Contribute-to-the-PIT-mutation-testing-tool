@@ -52,16 +52,16 @@ class BITMethodVisitor1 extends AbstractInsnMutator {
            "Replaced bitwise OR with AND (BIT)"));
   
     MUTATIONS.put(Opcodes.IXOR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (BIT)"));
+           "Replaced bitwise XOR with AND (BIT)"));
    
     MUTATIONS.put(Opcodes.ISHL, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (BIT)"));
+           "Replaced bitwise SHL with AND (BIT)"));
   
     MUTATIONS.put(Opcodes.ISHR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (BIT)"));
+           "Replaced bitwise SHR with AND (BIT)"));
   
     MUTATIONS.put(Opcodes.IUSHR, new InsnSubstitution(Opcodes.IAND,
-           "Replaced bitwise OR with AND (BIT)"));
+           "Replaced bitwise USHR with AND (BIT)"));
 
 
     //Longs
@@ -72,16 +72,16 @@ class BITMethodVisitor1 extends AbstractInsnMutator {
             "Replaced bitwise OR with AND (BIT)"));
     
     MUTATIONS.put(Opcodes.LXOR, new InsnSubstitution(Opcodes.LAND,
-            "Replaced bitwise OR with AND (BIT)"));
+            "Replaced bitwise XOR with AND (BIT)"));
     
     MUTATIONS.put(Opcodes.LSHL, new InsnSubstitution(Opcodes.LAND,
-            "Replaced bitwise OR with AND (BIT)"));
+            "Replaced bitwise SHL with AND (BIT)"));
     
     MUTATIONS.put(Opcodes.LSHR, new InsnSubstitution(Opcodes.LAND,
-            "Replaced bitwise OR with AND (BIT)"));
+            "Replaced bitwise SHR with AND (BIT)"));
     
     MUTATIONS.put(Opcodes.LUSHR, new InsnSubstitution(Opcodes.LAND,
-            "Replaced bitwise OR with AND (BIT)"));
+            "Replaced bitwise USHR with AND (BIT)"));
 
 
   }
