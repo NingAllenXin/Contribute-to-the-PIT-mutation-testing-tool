@@ -57,7 +57,7 @@ public class App
 //    }
     public int checkM4()
     {
-        int a = 0;
+        int a = 999;
         int c = 0;
          a = 3;  
         return a;

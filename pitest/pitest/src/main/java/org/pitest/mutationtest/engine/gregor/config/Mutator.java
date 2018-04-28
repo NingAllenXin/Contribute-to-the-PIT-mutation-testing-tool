@@ -40,6 +40,7 @@ import org.pitest.mutationtest.engine.gregor.Mymutators.AOR4;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AddAfterLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AddBeforeLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.M1;
+import org.pitest.mutationtest.engine.gregor.Mymutators.M2;
 import org.pitest.mutationtest.engine.gregor.Mymutators.MinusAfterLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.MinusBeforeLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.NEG;
@@ -129,6 +130,8 @@ public final class Mutator {
     add("addbeforeload",new AddBeforeLoad());
     add("minusbeforeload",new MinusBeforeLoad());
     add("minusfterload",new MinusAfterLoad());
+    
+    addGroup("M2",M2.makeMutators());
     /**
      * Default mutator that removes method calls to void methods.
      *

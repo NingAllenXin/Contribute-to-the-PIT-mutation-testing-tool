@@ -2,7 +2,9 @@ package org.pitest.mutationtest.engine.gregor.Mymutators;
 
 import java.io.IOException; 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.objectweb.asm.ClassReader;
@@ -24,13 +26,21 @@ public class M2 implements MethodMutatorFactory {
         int empty = 0;
         return new M2SubsituteMethodVisitor(empty, methodVisitor, context,methodindex);
     }
-
+    M2(int methodindex) {
+        this.methodindex = methodindex;
+    }
     @Override
     public String getGloballyUniqueId() {
         // TODO Auto-generated method stub
         return null;
     }
-
+    public static Iterable<MethodMutatorFactory> makeMutators() {
+        final List<MethodMutatorFactory> variations = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            variations.add(new M2(i));
+        }
+        return variations;
+    }
     @Override
     public String getName() {
         // TODO Auto-generated method stub
@@ -90,7 +100,7 @@ class M2SubsituteMethodVisitor extends MethodVisitor {
     public void visitMethodInsn(int opcode, String owner, String name, 
             String desc, boolean itf) {
         ArrayList<MethodInfo> overloaded = findOverLoad(owner, name, desc);
-        if (overloaded.size() == 0) {
+        if (overloaded.size() <= methodindex) {
             super.visitMethodInsn(opcode, owner, name, desc, itf);
         } else {
             String newDesc = overloaded.get(methodindex).getMethodDescriptor();    //loaded first one        can be random!!!!!!!!!!!
@@ -102,7 +112,33 @@ class M2SubsituteMethodVisitor extends MethodVisitor {
     public void invokewithchangedinput(int opcode, String owner, String name, String olddesc, boolean itf, String newdesc) {
         Type[] oldType = Type.getArgumentTypes(olddesc);
         Type[] newType = Type.getArgumentTypes(newdesc);
-        
+        if (oldType.length < newType.length) {
+            Type[]t1 = Arrays.copyOfRange(newType, oldType.length, newType.length);
+            for (int i = 0;i < t1.length; i++) {
+                String desc = t1[i].getDescriptor();
+                    if (desc.equals("I") || desc.equals("Z") || desc.equals("C") || desc.equals("B") || desc.equals("S")) {
+                        super.visitInsn(Opcodes.ICONST_0);
+                    }  else if (desc.equals("D")) {
+                        super.visitInsn(Opcodes.DCONST_0);
+                    } else if (desc.equals("F")) {
+                    super.visitInsn(Opcodes.FCONST_0);
+                    } else if (desc.equals("J")) {   //long
+                    super.visitInsn(Opcodes.LCONST_0); 
+                } else { //string or other
+                    super.visitInsn(Opcodes.ACONST_NULL);
+                }
+            }
+        } else {
+            Type[]t2 = Arrays.copyOfRange(oldType, newType.length, oldType.length);
+            for (int i = t2.length - 1; i >= 0; i--) {
+                if (t2[i].getSize() == 1) {
+                    super.visitInsn(Opcodes.POP);
+                } else {
+                    super.visitInsn(Opcodes.POP2);
+                }
+            }  
+        }
+        super.visitMethodInsn(opcode, owner, name, newdesc, itf);
         
     }
     
