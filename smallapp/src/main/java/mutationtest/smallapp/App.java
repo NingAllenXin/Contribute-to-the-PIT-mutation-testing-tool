@@ -48,13 +48,12 @@ public class App
 //            return new App().Int;
 //        }
 //    }
-//    public int  checkM1(int num)
-//    {
-//        App a = null;
-//            
-//            return a.Int;
-//        
-//    }
+    public int  checkM1(int num)
+    {
+        App a = null;
+            return a.Int;
+            
+    }
 
 //    public double checkselfadd(int a)  //a -> a++
 //    {
@@ -82,15 +81,16 @@ public class App
 //    public double checkselfadd(double a)
 //    {
 //        double b=1.0;
-//        String s=String.valueOf(b++);
+//        String s=String.valueOf(b);
+//        s=String.valueOf(b);
 //        return s.equals("1.0")?1.0:(Double.valueOf(s));
 //    }
-    public int checkAND(int c) {
-        int a = 1;
-        int b = 2;
-        String s = String.valueOf((a & b));
-        return s.equals("0") ? 0 : Integer.valueOf(s)-3;
-    }
+//    public int checkAND(int c) {
+//        int a = 1;
+//        int b = 2;
+//        String s = String.valueOf((a & b));
+//        return s.equals("0") ? 0 : Integer.valueOf(s)-3;
+//    }
     public static void main( String[] args )
     {
         App a=new App();

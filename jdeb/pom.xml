@@ -97,6 +97,7 @@
          <version>1.4.0-SNAPSHOT</version>
         
          <configuration>
+            <threads>4</threads>
              <mutators>
                  <mutator>OurMutators</mutator>
              </mutators>

@@ -14,7 +14,7 @@
  */
 package org.pitest.mutationtest.engine.gregor.config;
 
-import java.util.ArrayList;  
+import java.util.ArrayList;   
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -107,7 +107,7 @@ public final class Mutator {
     addGroup("OurMutators", ourMutators());
     add("AOD_IgnoreFirst", new AODIgnoreFirst());   //DiJin    added   test================================================================
     add("AOD_IgnoreSecond",AODIgnoreSecond.AOD_MUTATOR);   //DiJin    added   test================================================================
-    add("M1",new M1()); // Di Jin added
+    add("M1",M1.M1_Dereference_mutator); // Di Jin added
     
     add("AOR1",AOR1.AOR_MUTATOR);//Ning Xin  added test=================================================
     add("AOR2",AOR2.AOR_MUTATOR2);
@@ -239,7 +239,16 @@ public final class Mutator {
 //==========================
   private static Collection<MethodMutatorFactory> ourMutators() {
       return group(new AODIgnoreFirst(),
-                   new M1(),
+                   BIT1.BIT1,
+                   BIT2.BIT2,
+                   BIT3.BIT3,
+                   BIT4.BIT4,
+                   BIT5.BIT5,
+                   new MinusAfterLoad(),
+                   new MinusBeforeLoad(),
+                   new AddBeforeLoad(),
+                   new AddAfterLoad(),
+                   NEG.NEG,
                    AODIgnoreSecond.AOD_MUTATOR,
                    AOR1.AOR_MUTATOR,
                    AOR2.AOR_MUTATOR2,

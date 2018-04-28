@@ -8,8 +8,8 @@ import org.pitest.mutationtest.engine.gregor.MethodMutatorFactory;
 import org.pitest.mutationtest.engine.gregor.MutationContext;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.Type;
-public class M1 implements MethodMutatorFactory {
-   // M1_Dereference_mutator;
+public enum M1 implements MethodMutatorFactory {
+    M1_Dereference_mutator;
 
     @Override
     public MethodVisitor create(MutationContext context, MethodInfo methodInfo, MethodVisitor methodVisitor) {
@@ -25,7 +25,7 @@ public class M1 implements MethodMutatorFactory {
     @Override
     public String getName() {
         // TODO Auto-generated method stub
-        return toString();
+        return name();
     }
 
 }
@@ -41,53 +41,47 @@ class M1DereferenceVisitor extends MethodVisitor {
           this.context = context;
           this.factory = factory;
         }
-    
     @Override
     public void visitFieldInsn(int opcode, String owner, String name, String desc) {
+        final MutationIdentifier mutationId = this.context.registerMutation(this.factory,owner + "checked by_getfield_M1");
         if (opcode == Opcodes.GETFIELD) {
             Label dosuper = new Label();
             Label skipsuper = new Label();
-            super.visitInsn(Opcodes.DUP); 
+            super.visitInsn(Opcodes.DUP);
             super.visitJumpInsn(Opcodes.IFNONNULL, dosuper);
-            final MutationIdentifier mutationId = this.context.registerMutation(new M1(),owner + "is null_getfield_M1");
+            super.visitInsn(Opcodes.POP);
             condition(desc);     //load on stack
             super.visitJumpInsn(Opcodes.GOTO, skipsuper);
             super.visitLabel(dosuper);
             super.visitFieldInsn(opcode, owner, name, desc);
             super.visitLabel(skipsuper);
-            
-           } 
-        if (opcode == Opcodes.PUTFIELD) {
+           }  else if (opcode == Opcodes.PUTFIELD) {
               if (Type.getType(desc).getSize() == 1) {   //for int float
-//            Label dosuper = new Label();
-//            Label skipsuper = new Label();
-//            super.visitInsn(Opcodes.DUP2);
-//            super.visitInsn(Opcodes.POP);
-//            super.visitJumpInsn(Opcodes.IFNONNULL, dosuper);
-//            final MutationIdentifier mutationId = this.context.registerMutation(new M1(),owner + "is null_putfield_size1_M1");
-//            super.visitInsn(Opcodes.POP2);
-//            super.visitJumpInsn(Opcodes.GOTO, skipsuper);
-//            super.visitLabel(dosuper);
-//            super.visitFieldInsn(opcode, owner, name, desc);
-//            super.visitLabel(skipsuper);
-            super.visitFieldInsn(opcode, owner, name, desc); //need to delete
+                Label dosuper = new Label();
+                Label skipsuper = new Label();
+                super.visitInsn(Opcodes.DUP2);
+                super.visitInsn(Opcodes.POP);
+                super.visitJumpInsn(Opcodes.IFNONNULL, dosuper);
+                super.visitInsn(Opcodes.POP2);
+                super.visitJumpInsn(Opcodes.GOTO, skipsuper);
+                super.visitLabel(dosuper);
+                super.visitFieldInsn(opcode, owner, name, desc);
+                super.visitLabel(skipsuper);
             } else {  //for double and long
-//            Label dosuper = new Label();
-//            Label skipsuper = new Label();
-//            super.visitInsn(Opcodes.DUP2_X1);
-//            super.visitInsn(Opcodes.POP2);
-//            super.visitInsn(Opcodes.DUP);
-//            super.visitJumpInsn(Opcodes.IFNONNULL, dosuper);
-//            final MutationIdentifier mutationId = this.context.registerMutation(new M1(),owner + "is null_putfield_size2_M1");
-//            super.visitInsn(Opcodes.POP);
-//            super.visitInsn(Opcodes.POP2);
-//            super.visitJumpInsn(Opcodes.GOTO, skipsuper);
-//            super.visitLabel(dosuper);
-//            super.visitInsn(Opcodes.DUP_X2);
-//            super.visitInsn(Opcodes.POP);
-//            super.visitFieldInsn(opcode, owner, name, desc);
-//            super.visitLabel(skipsuper);
-                super.visitFieldInsn(opcode, owner, name, desc); //need to delete
+              Label dosuper = new Label();
+              Label skipsuper = new Label();
+              super.visitInsn(Opcodes.DUP2_X1);
+              super.visitInsn(Opcodes.POP2);
+              super.visitInsn(Opcodes.DUP);
+              super.visitJumpInsn(Opcodes.IFNONNULL, dosuper);
+              super.visitInsn(Opcodes.POP);
+              super.visitInsn(Opcodes.POP2);
+              super.visitJumpInsn(Opcodes.GOTO, skipsuper);
+              super.visitLabel(dosuper);
+              super.visitInsn(Opcodes.DUP_X2);
+              super.visitInsn(Opcodes.POP);
+              super.visitFieldInsn(opcode, owner, name, desc);
+              super.visitLabel(skipsuper);
             }
         } else {
             super.visitFieldInsn(opcode, owner, name, desc);
@@ -98,17 +92,12 @@ class M1DereferenceVisitor extends MethodVisitor {
         public void condition(String desc) {
             if (desc.equals("I") || desc.equals("Z") || desc.equals("C") || desc.equals("B") || desc.equals("S")) {
                 super.visitInsn(Opcodes.ICONST_0);
-            }
-           
-        if (desc.equals("D")) {
+            }  else if (desc.equals("D")) {
                 super.visitInsn(Opcodes.DCONST_0);
-            } 
-        if (desc.equals("F")) {
+            } else if (desc.equals("F")) {
             super.visitInsn(Opcodes.FCONST_0);
-            } 
-        if (desc.equals("J")) {   //long
+            } else if (desc.equals("J")) {   //long
             super.visitInsn(Opcodes.LCONST_0); 
-               
         } else { //string or other
             super.visitInsn(Opcodes.ACONST_NULL);
         }

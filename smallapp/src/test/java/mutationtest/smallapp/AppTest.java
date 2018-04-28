@@ -63,7 +63,7 @@ public class AppTest
 //    
     @Test
     public void testBIT(){
-        assertEquals(0, new App().checkAND(1)); // should be killed
+        assertEquals(0, new App().checkM1(1)); 
     }
 
 }
