@@ -40,6 +40,7 @@ import org.pitest.mutationtest.engine.gregor.Mymutators.AOR4;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AddAfterLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AddBeforeLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.M1;
+import org.pitest.mutationtest.engine.gregor.Mymutators.M4;
 import org.pitest.mutationtest.engine.gregor.Mymutators.MinusAfterLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.MinusBeforeLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.NEG;
@@ -125,7 +126,6 @@ public final class Mutator {
     add("BIT4",BIT4.BIT4);
     add("BIT5",BIT5.BIT5);
     add("NEG",NEG.NEG);
-    
     add("addafterload",new AddAfterLoad());//DiJin
     add("addbeforeload",new AddBeforeLoad());
     add("minusbeforeload",new MinusBeforeLoad());

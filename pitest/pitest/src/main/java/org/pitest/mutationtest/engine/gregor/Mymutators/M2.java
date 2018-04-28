@@ -17,11 +17,12 @@ import org.pitest.mutationtest.engine.gregor.MutationContext;
 
 public class M2 implements MethodMutatorFactory {
 
+    int methodindex;
     @Override
     public MethodVisitor create(MutationContext context, MethodInfo methodInfo, MethodVisitor methodVisitor) {
         // TODO Auto-generated method stub
         int empty = 0;
-        return new M2SubsituteMethodVisitor(empty, methodVisitor, context);
+        return new M2SubsituteMethodVisitor(empty, methodVisitor, context,methodindex);
     }
 
     @Override
@@ -77,10 +78,12 @@ class M2SubsituteClassVisitor extends ClassVisitor {   //to get all methods
 class M2SubsituteMethodVisitor extends MethodVisitor {
     private final MutationContext      context;
     Set<Methods> mset = new HashSet<>();
+    int methodindex;
     
-    M2SubsituteMethodVisitor(int api, MethodVisitor mv, MutationContext context) {
+    M2SubsituteMethodVisitor(int api, MethodVisitor mv, MutationContext context,int index) {
         super(Opcodes.ASM6, mv);
         this.context = context;
+        this.methodindex = index;
     }
     
     @Override
@@ -90,12 +93,18 @@ class M2SubsituteMethodVisitor extends MethodVisitor {
         if (overloaded.size() == 0) {
             super.visitMethodInsn(opcode, owner, name, desc, itf);
         } else {
-            String newDesc = overloaded.get(0).getMethodDescriptor();    //loaded first one        can be random!!!!!!!!!!!
+            String newDesc = overloaded.get(methodindex).getMethodDescriptor();    //loaded first one        can be random!!!!!!!!!!!
                 //mutateOverloadedMethodInsn(opcode, owner, name, desc, itf,newDesc);
         }
     }
     
     
+    public void invokewithchangedinput(int opcode, String owner, String name, String olddesc, boolean itf, String newdesc) {
+        Type[] oldType = Type.getArgumentTypes(olddesc);
+        Type[] newType = Type.getArgumentTypes(newdesc);
+        
+        
+    }
     
     
 //    public void loadallmethods() {

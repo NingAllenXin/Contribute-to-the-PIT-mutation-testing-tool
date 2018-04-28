@@ -61,9 +61,14 @@ public class AppTest
 //        assertEquals(1.0,new App().checkselfadd(99.0));//should survive  becasue 2.0-1.0=1.0
 //    }
 //    
+//    @Test
+//    public void testBIT(){
+//        assertEquals(0, new App().checkM1(1)); 
+//    }
+    
     @Test
     public void testBIT(){
-        assertEquals(0, new App().checkM1(1)); 
+        assertEquals(1, new App().checkM4()); 
     }
 
 }
