@@ -57,10 +57,10 @@ public class App
 //    }
     public int checkM4()
     {
-        int a = 1;
-        int c = 9;
-        int d = c+a;  
-        return d;
+        int a = 0;
+        int c = 0;
+         a = 3;  
+        return a;
     }
 //    public double checkselfadd(int a)  //a -> a++
 //    {

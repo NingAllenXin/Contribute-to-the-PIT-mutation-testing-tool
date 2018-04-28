@@ -40,7 +40,6 @@ import org.pitest.mutationtest.engine.gregor.Mymutators.AOR4;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AddAfterLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.AddBeforeLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.M1;
-import org.pitest.mutationtest.engine.gregor.Mymutators.M4;
 import org.pitest.mutationtest.engine.gregor.Mymutators.MinusAfterLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.MinusBeforeLoad;
 import org.pitest.mutationtest.engine.gregor.Mymutators.NEG;
