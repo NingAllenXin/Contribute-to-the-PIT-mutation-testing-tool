@@ -55,9 +55,9 @@ class M4 extends MethodVisitor {
                 int index = variableIndex.indexOf(var); // get index of the variable in our saved variable list
 
                 Random random = new Random();
-                idxForRep = random.nextInt(varIndex.size()); // generate random index for replacment of variable
+                idxForRep = random.nextInt(variableIndex.size()); // generate random index for replacment of variable
 
-                int numberOfVariable = 0;
+                int numberOfVariable = 0; // calculate the number of variables in the same type
                 for (int i = 0; i < variableType.size(); i++) {
                     if (variableType.get(i).equals(variableType.get(index))) {
                         numberOfVariable++;
