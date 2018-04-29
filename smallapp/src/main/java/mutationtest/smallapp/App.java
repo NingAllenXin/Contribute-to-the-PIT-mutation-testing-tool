@@ -48,11 +48,11 @@ public class App
 //            return new App().Int;
 //        }
 //    }
-//    public int  checkM1(int num)
+//    public int  checkM1()
 //    {
-//        int b = 0;
+//        
 //        App a = null;
-//            return a.Int;
+//        return a.Int;
 //            
 //    }
     public int checkM4()

@@ -50,29 +50,23 @@ class M4visitor extends MethodVisitor {
 
     @Override
     public void visitVarInsn(final int opcode, final int var) {
-        if (opcode == Opcodes.ILOAD || opcode == Opcodes.LLOAD || opcode == Opcodes.FLOAD || opcode == Opcodes.DLOAD
-                || opcode == Opcodes.ALOAD) { 
+        if (opcode == Opcodes.ILOAD || opcode == Opcodes.DLOAD || opcode == Opcodes.LLOAD || opcode == Opcodes.FLOAD || opcode == Opcodes.ALOAD) { 
             if (variableIndex.contains(var)) {
                 int index = variableIndex.indexOf(var); 
-
                 Random random = new Random();
                 idxForRep = random.nextInt(variableIndex.size()); 
-
                 int numberOfVariable = 0; // calculate the number of variables in the same type
                 for (int i = 0; i < variableType.size(); i++) {
                     if (variableType.get(i).equals(variableType.get(index))) {
                         numberOfVariable++;
                     }
                 }
-
                 if (numberOfVariable > 1) {
                     while (!(variableType.get(idxForRep).equals(variableType.get(index))) || idxForRep == index) {
                         idxForRep = random.nextInt(variableIndex.size()); 
                     }
                 }
-
-                final MutationIdentifier newId = this.context.registerMutation(this.factory,
-                        "Replaced " + variableType.get(index) + " with " + variableType.get(idxForRep));
+                final MutationIdentifier newId = this.context.registerMutation(this.factory, "Variable of type" + variableType.get(index) + "has been changed to different local variable with same type");
                 if (this.context.shouldMutate(newId)) {
                     super.visitVarInsn(opcode, variableIndex.get(idxForRep)); 
                 } else {
@@ -81,8 +75,7 @@ class M4visitor extends MethodVisitor {
             } else {
                 super.visitVarInsn(opcode, var);
             }
-        } else if (opcode == Opcodes.ISTORE || opcode == Opcodes.LSTORE || opcode == Opcodes.FSTORE
-                || opcode == Opcodes.DSTORE || opcode == Opcodes.ASTORE) {
+        } else if (opcode == Opcodes.ISTORE || opcode == Opcodes.DSTORE || opcode == Opcodes.LSTORE || opcode == Opcodes.FSTORE || opcode == Opcodes.ASTORE) {
             if (!(variableIndex.contains(var))) {
                 variableIndex.add(var);
                 switch (opcode) {
@@ -92,23 +85,21 @@ class M4visitor extends MethodVisitor {
                 case Opcodes.DSTORE:
                     variableType.add("Double");
                     break;
-                case Opcodes.FSTORE:
-                    variableType.add("Float");
-                    break;
                 case Opcodes.LSTORE:
                     variableType.add("Long");
+                    break;
+                case Opcodes.FSTORE:
+                    variableType.add("Float");
                     break;
                 case Opcodes.ASTORE:
                     variableType.add("Object");
                     break;
                 }
             } else {
-
             }
             super.visitVarInsn(opcode, var);
         } else {
             super.visitVarInsn(opcode, var);
         }
-
     }
 }

@@ -67,7 +67,7 @@ public class AppTest
 //    }
     
     @Test
-    public void testBIT(){
+    public void test(){
         assertEquals(0, new App().checkM4()); 
     }
 

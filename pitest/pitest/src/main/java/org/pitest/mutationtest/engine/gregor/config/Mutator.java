@@ -108,7 +108,7 @@ public final class Mutator {
     addGroup("OurMutators", ourMutators());
     add("AOD_IgnoreFirst", new AODIgnoreFirst());   //DiJin    added   test================================================================
     add("AOD_IgnoreSecond",AODIgnoreSecond.AOD_MUTATOR);   //DiJin    added   test================================================================
-    add("M1",M1.M1_Dereference_mutator); // Di Jin added
+    add("M1",M1.M1); // Di Jin added
     
     add("AOR1",AOR1.AOR_MUTATOR);//Ning Xin  added test=================================================
     add("AOR2",AOR2.AOR_MUTATOR2);
@@ -250,6 +250,10 @@ public final class Mutator {
                    new MinusBeforeLoad(),
                    new AddBeforeLoad(),
                    new AddAfterLoad(),
+                   new AddAfterLoad(),
+                   new AddBeforeLoad(),
+                   new MinusBeforeLoad(),
+                   new MinusAfterLoad(),
                    NEG.NEG,
                    AODIgnoreSecond.AOD_MUTATOR,
                    AOR1.AOR_MUTATOR,
@@ -260,6 +264,8 @@ public final class Mutator {
                    ROR2.ROR_MUTATOR2,
                    ROR3.ROR_MUTATOR3,
                    ROR4.ROR_MUTATOR4,
+                   M4.M4,
+                   M1.M1,
                    ROR5.ROR_MUTATOR5);
                    
   }

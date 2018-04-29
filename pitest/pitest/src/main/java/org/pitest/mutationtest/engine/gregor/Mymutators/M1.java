@@ -9,7 +9,7 @@ import org.pitest.mutationtest.engine.gregor.MutationContext;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.Type;
 public enum M1 implements MethodMutatorFactory {
-    M1_Dereference_mutator;
+    M1;
 
     @Override
     public MethodVisitor create(MutationContext context, MethodInfo methodInfo, MethodVisitor methodVisitor) {
@@ -72,14 +72,14 @@ class M1DereferenceVisitor extends MethodVisitor {
               Label skipsuper = new Label();
               super.visitInsn(Opcodes.DUP2_X1);
               super.visitInsn(Opcodes.POP2);
-              super.visitInsn(Opcodes.DUP);
+              super.visitInsn(Opcodes.DUP_X2);
               super.visitJumpInsn(Opcodes.IFNONNULL, dosuper);
               super.visitInsn(Opcodes.POP);
               super.visitInsn(Opcodes.POP2);
               super.visitJumpInsn(Opcodes.GOTO, skipsuper);
               super.visitLabel(dosuper);
-              super.visitInsn(Opcodes.DUP_X2);
-              super.visitInsn(Opcodes.POP);
+//              super.visitInsn(Opcodes.DUP_X2);
+//              super.visitInsn(Opcodes.POP);
               super.visitFieldInsn(opcode, owner, name, desc);
               super.visitLabel(skipsuper);
             }
